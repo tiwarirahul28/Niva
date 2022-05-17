@@ -48,6 +48,9 @@ html {
 
 .nav-btn{
     padding: 4px 10px;
+    color: #F2984C;
+    background-color: #fff;
+    border: none;
 }
 
 .nav-btn i {
@@ -115,7 +118,7 @@ html {
 .section{
     min-height: 100vh;
     padding: 14px 5%;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .hero{
