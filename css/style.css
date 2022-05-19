@@ -252,6 +252,7 @@ p{
     text-align: center;
     padding-top: 10px;
     font-weight: 700;
+    margin-top: 60px;
 }
 
 .section-title::after{
@@ -615,32 +616,33 @@ section{
     width: 80%;
     margin: 30px auto;
     background: #fff;
+    padding: 1px 30px;
     /* padding: 4px 10px; */
 }
 
 .para h1{
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
     text-align: center;
     color: #6F6F6F;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .para p{
     font-style: normal;
     font-weight: 900;
     font-size: 14px;
-    line-height: 32px;
+    line-height: 28px;
     text-align: center;
     letter-spacing: 0.05em;
     color: #6F6F6F;
-    padding: 20px;
+    /* padding: 0px 20px 20px; */
 }
 
 .about{
     width: 100%;
-    margin-top: 100px;
+    margin-bottom: 60px;
     display: flex;
 }
 
@@ -661,6 +663,7 @@ section{
     align-items: center;
     flex-wrap: wrap ;
     margin: 0 auto;
+    margin-top: 100px;
 }
 .right-box{
     width: 230px;
@@ -824,7 +827,7 @@ input[type="submit"]{
 }
 
 .general{
-    width: 80%;
+    width: 60%;
     margin: 70px auto;
     display: flex;
     flex-wrap: wrap;
@@ -835,21 +838,21 @@ input[type="submit"]{
 
 .general a{
     margin-top: 20px;
+    font-size: 16px;
 }
 
 .general .section-title{
     font-weight: 700;
-    font-size: 18px;
     color: #6F6F6F;
+    margin-top: 60px;
 }
 .general .section-title::after{
-    top: 2.5rem;
+    top: 2.2rem;
     width: 75px;
 }
 
 .general .passive{
     font-weight: 700;
-    font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #F38F46;
@@ -879,6 +882,7 @@ input[type="submit"]{
     font-size: 20px;
     line-height: 36px;
     color: #363F40;
+    padding-left: 10px;
 }
 
 .paragraph .paragraph-box p{
@@ -887,5 +891,6 @@ input[type="submit"]{
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    padding-left: 10px;
     color: #505050;
 }
