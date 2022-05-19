@@ -663,8 +663,8 @@ section{
     margin: 0 auto;
 }
 .right-box{
-    width: 250px;
-    height: 200px;
+    width: 230px;
+    height: 180px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -684,7 +684,7 @@ section{
     line-height: 50px;
     text-align: center;
     color: #363F40;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 @media screen and (max-width: 768px){
@@ -716,14 +716,15 @@ section{
 .footer .box-container{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 70px;
+    margin: 0px 80px;
+    padding: 40px 0;
 }
 
 .footer .box-container .box .socail a{
     display: inline-block;
     margin-right: 10px;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 22px;
     color: #23A6F0;
 }
 
