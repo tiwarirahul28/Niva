@@ -58,6 +58,7 @@ html {
 .nav-btn i {
     font-size: 20px;
     padding: 4px 10px;
+    margin-top: 20px
 }
 
 .nav-links{
@@ -67,9 +68,14 @@ html {
     flex-direction: column;
     margin-top: 20px;
 }
+.nav-links a{
+    margin: 10px 20px;
+    /* padding-top: 36px; */
+}
 
 .show-links {
-    height: 370px;
+    height: 500px;
+    margin: 0 auto;
 }
 
 .nav-link{
@@ -82,9 +88,14 @@ html {
     border-top: 1px solid grey;
     color: #00AEEF;
     padding: 20px 0;
-    margin: 20px;
+}
+.contact-link{
+    text-align: center;
 }
 
+.contact-link a{
+    padding: 10px 20px;
+}
 @media screen and (min-width: 992px) {
     .navbar {
         height: 80px;
@@ -101,6 +112,7 @@ html {
     .nav-btn {
         display: none;
     }
+
     .nav-links {
         height: auto !important;
         flex-direction: row;
@@ -108,12 +120,14 @@ html {
         width: 100%;
     }
     .nav-link {
-        padding: 0;
+        padding: -10px;
         border-top: none;
-        margin-right: 1rem;
+        margin-top: -20px;
         font-size: 16px;
     }
     .contact-link {
+        text-align: center;
+        padding-top: -10px;
         margin-right: 0;
         margin-left: auto;
     }
@@ -122,7 +136,7 @@ html {
 .section{
     /* min-height: 100vh; */
     padding: 14px 5%;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .hero{
@@ -140,7 +154,8 @@ html {
     font-style: normal;
     font-size: 28px;
     font-weight: 900;
-    line-height: 40px
+    line-height: 40px;
+    padding-top: 24px;
 }
 span{
     color: #00AEEF;
@@ -322,8 +337,8 @@ section{
     position: relative;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 28px;
+    line-height: 40px;
     text-align: left;
 }
 
@@ -335,7 +350,7 @@ section{
     left: 0;
     right: 0;
     margin-left: 0;
-    top: 0rem;
+    top: 0.5rem;
     text-align: left;
     background-color: #F2984C;
 }
@@ -350,6 +365,10 @@ section{
     width: 400px;
     display: flex;
     flex-direction: column;
+}
+
+.left-side p{
+    font-size: 14px;
 }
 
 .arrow{
@@ -384,11 +403,11 @@ section{
 }
   
 .right-side .card-container .card {
-    width: 250px;
-    height: 350px;
+    width: 290px;
+    height: 320px;
     margin: 10px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     /* box-shadow: 12px 9px 12px rgba(0, 0, 0, 0.100); */
@@ -433,8 +452,8 @@ section{
 }
 
 .companies h1{
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 900;
+    font-size: 18px;
     line-height: 36px;
     text-align: center;
     color: #5C5C5C;
@@ -506,8 +525,8 @@ section{
 .boxes1{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
     margin-top: 20px;
 }
 
@@ -517,8 +536,11 @@ section{
     background: #FFFFFF;    
     margin: 10px 30px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.1);}
-
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content2:hover{
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+}
 .content2 .box1{
     padding: 20px;
 }
@@ -559,7 +581,7 @@ section{
 
 .hear .section-title{
     position: relative;
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
     padding-top: 10px;
 }
@@ -593,6 +615,7 @@ section{
     width: 80%;
     margin: 30px auto;
     background: #fff;
+    /* padding: 4px 10px; */
 }
 
 .para h1{
@@ -606,12 +629,13 @@ section{
 
 .para p{
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 900;
+    font-size: 14px;
     line-height: 32px;
     text-align: center;
     letter-spacing: 0.05em;
     color: #6F6F6F;
+    padding: 20px;
 }
 
 .about{
@@ -624,9 +648,14 @@ section{
     width: 50%;
     padding: 5px;
 }
+.about-left p{
+    margin-top: 20px;
+    font-weight: 500;
+    width: 550px;
+}
 
 .about-right{
-    width: 49%;
+    width: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -634,21 +663,19 @@ section{
     margin: 0 auto;
 }
 .right-box{
-    width: 200px;
+    width: 250px;
     height: 200px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    margin: 16px 0;
 }
-
-
+.right-box:hover{
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+}
 .right-box .right-card{
     text-align: center;
-    margin: 0 auto;
-}
-
-.border{
-    box-shadow: 15px 20px 50px rgba(0, 0, 0, 0.07);
+    margin: 10px;
 }
 
 .right-box .right-card h1{
@@ -689,11 +716,13 @@ section{
 .footer .box-container{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 70px;
 }
 
 .footer .box-container .box .socail a{
     display: inline-block;
     margin-right: 10px;
+    margin-top: 20px;
     font-size: 16px;
     color: #23A6F0;
 }
@@ -750,13 +779,13 @@ section{
 
 input[type="submit"]{
     width: 120px;
-    height: 43px;
+    height: 40px;
     border: none;
     background-color: #F2984C;
     outline: none;
     cursor: pointer;
     color: #fff;
-    margin-left: -8px;
+    margin-left: -10px;
     box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
     border-radius: 8.78788px;
 }
@@ -827,16 +856,18 @@ input[type="submit"]{
 .paragraph .paragraph-box{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07); */
     border-radius: 15px;
     padding: 20px;
     margin-top: 40px;
     text-align: left;
 }
 
+.paragraph-box:hover{
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+}
 .paragraph .paragraph-box h1{
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 20px;
     line-height: 36px;
     color: #363F40;
@@ -845,8 +876,8 @@ input[type="submit"]{
 .paragraph .paragraph-box p{
     text-align: left;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
     color: #505050;
 }
