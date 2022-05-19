@@ -48,7 +48,7 @@ html {
 }
 
 .nav-btn{
-    padding: 4px 10px;
+    padding: 4px 0px;
     color: #F2984C;
     background-color: #fff;
     border: none;
@@ -509,7 +509,7 @@ section{
     border: 1px solid rgba(0, 0, 0, 0.1);}
 
 .content2 .box1{
-    padding: 30px;
+    padding: 20px;
 }
 
 .content2 .box1 h1{
@@ -690,7 +690,7 @@ section{
 
 .footer .box-container .box{
     flex: 1 1 15rem;
-    margin: 20px 0px 20px 80px;
+    margin: 20px 20px 20px 40px;
 }
 
 .footer .box-container .box h3{
