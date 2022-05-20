@@ -210,19 +210,31 @@ p{
 .hero .right{
     width: 800px;
     position: relative;
-    background-image: url(/images/Ellipse\ 44.png);
-    background-repeat: no-repeat;
-    overflow: hidden;
 }
 
-.hero .right .image{
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
+.right .back-img{
+    width: 500px;
+    float: right;
+    height: 450px;
 }
 
-.hero .right .image img{
+.right .back-img img{
     width: 100%;
+    height: 100%;
+}
+
+.right .image{
+    position: absolute;
+    top: 0px;
+    width: 95%;
+    margin-left: 10px;
+    height: 90%;
+    float: left;
+}
+
+.right .image img{
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
 }
 
@@ -914,18 +926,18 @@ input[type="submit"]{
 
 
 /* Page Two */
-.back{
+.back-btn{
     text-align: center;
     padding: 20px;
 }
-.back a{
+.back-btn a{
     color: #00AEEF;
     font-size: 14px;
 }
 
 /* PageThree */
-.left .input h1{
+/* .left .input h1{
     font-size: 14px;
     margin-bottom: -10px;
-}
+} */
 
