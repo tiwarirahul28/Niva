@@ -141,11 +141,11 @@ html {
 
 .hero{
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    /* grid-template-columns: repeat(2, 2fr); */
+    grid-template-columns: 40% 56%;
     grid-gap: 50px;
 }
 .hero .left{
-    /* margin-right: 20px; */
     padding-left: 50px;
 }
 
@@ -234,9 +234,9 @@ span{
 .icon{
     position: absolute;
     width: 60px;
-    height: 60px;
+    height: auto;
     right: 10px;
-    top: 420px;
+    top: 500px;
     /* position: fixed; */
 
 }
@@ -320,7 +320,7 @@ section{
     grid-template-columns: repeat(4, 4fr);
     grid-gap: 50px;
     margin: auto ;
-    align-items: center;
+    place-items: center;
 }
 
 .content {
@@ -653,7 +653,7 @@ section{
 }
 
 .para h1{
-    font-weight: 700;
+    font-weight: 900;
     font-size: 18px;
     line-height: 20px;
     text-align: center;
@@ -664,7 +664,7 @@ section{
 
 .para p{
     font-style: normal;
-    font-weight: 900;
+    /* font-weight: 900; */
     font-size: 14px;
     line-height: 28px;
     text-align: center;
