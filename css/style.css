@@ -710,6 +710,15 @@ section{
         flex-wrap: wrap ;
         margin: 0 auto;
     }
+    .right-box{
+        width: 140px;
+        height: 120px;
+    }
+    .right-box .right-card h1{
+        font-size: 24px;
+        line-height: 30px;
+        padding-top: 16px;
+    }
     .about-left p{
         width: 100%;
     }
@@ -847,8 +856,8 @@ input[type="submit"]{
 .general .section-title{
     font-weight: 700;
     color: #6F6F6F;
-    margin-top: 60px;
 }
+
 .general .section-title::after{
     top: 2.2rem;
     width: 75px;
@@ -919,24 +928,3 @@ input[type="submit"]{
     margin-bottom: -10px;
 }
 
-/* PageFour */
-/* .hero .left .input{
-    display: inline-block;
-} */
-
-/* .hero .left .input input{
-    width: 140px;
-    font-size: 14px;
-} */
-
-/* .hero .left .input .employe{
-    display: flex;
-    justify-content: space-between;
-}
-
-.hero .left .input .employe a{
-    text-align: center;
-    color: #00AEEF;
-    font-size: 14px;
-    margin-top: 33px;
-} */
