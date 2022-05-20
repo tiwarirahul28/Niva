@@ -213,7 +213,6 @@ p{
     background-image: url(/images/Ellipse\ 44.png);
     background-repeat: no-repeat;
     overflow: hidden;
-    /* height: 700px; */
 }
 
 .hero .right .image{
@@ -306,7 +305,7 @@ section{
 }
 
 .content .box h1{
-    font-size: 20px;
+    font-size: 16px;
     color: #363F40;
 }
 
@@ -318,7 +317,7 @@ section{
 .content .box p{
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     color: #6F6F6F;
 }
@@ -380,10 +379,11 @@ section{
     margin-top: 50px;
     cursor: pointer;
 }
-.arrow i{
-    width: 50px;
-    height: 34px;
-    font-size: 44px;
+
+.material-icons{
+    width: 90px;
+    font-size: 50px;
+    font-weight: light;
 }
 
 .right-side{
@@ -407,14 +407,13 @@ section{
 }
   
 .right-side .card-container .card {
-    width: 290px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
     margin: 10px;
     display: inline-block;
     margin-right: 20px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* box-shadow: 12px 9px 12px rgba(0, 0, 0, 0.100); */
     border-radius: 15px;
 }
 
@@ -446,6 +445,7 @@ section{
     font-size: 12px;
     letter-spacing: 1px;
     text-align: left;
+    margin: 0;
     color: #5C5C5C;;
 }
 
@@ -470,7 +470,7 @@ section{
 
 .that .mg1{
     width: 200px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-right: 40px;
     text-align: center;
 }
@@ -546,11 +546,11 @@ section{
     box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
 }
 .content2 .box1{
-    padding: 20px;
+    padding: 30px;
 }
 
 .content2 .box1 h1{
-    font-size: 20px;
+    font-size: 16px;
     color: #363F40;
 }
 
@@ -562,7 +562,7 @@ section{
 .content2 .box1 p{
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     color: #6F6F6F;
 }
@@ -657,6 +657,7 @@ section{
     margin-top: 20px;
     font-weight: 500;
     width: 550px;
+    text-align: justify;
 }
 
 .about-right{
@@ -762,7 +763,7 @@ section{
 }
 
 .footer .box-container .box p{
-    font-size: 12px;
+    font-size: 14px;
     color: #5C5C5C;
     padding: 5px 0;
 }
