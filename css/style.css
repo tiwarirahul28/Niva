@@ -7,6 +7,7 @@
     transition: 0.5s;
     font-family: 'Poppins';
     /* overflow-x: hidden; */
+    line-height: normal;
 }
 
 html {
@@ -32,7 +33,9 @@ html {
 .nav-center{
     width: 95vw;
 }
-
+.nav-logo{
+    padding: 0px 20px;
+}
 .nav-header{
     height: auto;
     display: flex;
@@ -78,7 +81,7 @@ html {
     text-transform: capitalize;
     color: #00AEEF;
     letter-spacing: 1px;
-    padding: 20px 0;
+    padding: 20px 20px;
     border-top: 1px solid grey;
     /* transiton: var(--transition); */
 
@@ -115,7 +118,7 @@ html {
         width: 100%;
       }
       .nav-link {
-        padding: 0;
+        padding: 20px;
         border-top: none;
         margin-right: 1rem;
         font-size: 16px;
@@ -152,6 +155,13 @@ html {
     font-weight: 900;
     line-height: 40px;
     padding-top: 24px;
+}
+.hero .left p{
+    font-size: 14px;
+    color: #505050;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 14px 0;
 }
 span{
     color: #00AEEF;
@@ -227,6 +237,8 @@ span{
     height: 60px;
     right: 10px;
     top: 420px;
+    /* position: fixed; */
+
 }
 .right img{
     width: 100%;
@@ -257,14 +269,14 @@ span{
     text-align: center;
     padding-bottom: 40px;
     padding-top: 4px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .section-center::after{
     position: absolute;
     content: "";
-    width: 64px;
-    height: 0.18rem;
+    width: 100px;
+    height: 3px;
     left: 0;
     right: 0;
     margin: auto;
@@ -275,17 +287,16 @@ span{
 .section-left{
     position: relative;
     font-size: 28px;
-    text-align: center;
     padding-bottom: 40px;
     padding-top: 4px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .section-left::after{
     position: absolute;
     content: "";
-    width: 64px;
-    height: 0.18rem;
+    width: 100px;
+    height: 3px;
     left: 0;
     right: 0;
     margin-left: 0;
@@ -329,6 +340,7 @@ section{
 .content .box h1{
     font-size: 16px;
     color: #363F40;
+    font-weight: 900;
 }
 
 .content .box img{
@@ -340,8 +352,9 @@ section{
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     color: #6F6F6F;
+    padding: 10px 0;
 }
 
 @media screen and (max-width: 768px){
@@ -378,8 +391,11 @@ section{
 }
 
 .left-side p{
+    margin-top: -28px;
+    font-weight: 400;
     font-size: 14px;
-    /* margin-top: -30px; */
+    line-height: 24px;
+    color: #505050;
 }
 
 .arrow{
@@ -484,6 +500,11 @@ section{
     margin-right: 40px;
     text-align: center;
 }
+@media (max-width: 1366px){
+    .join-img{
+        width:100%;
+    }
+}
 
 @media screen and (max-width: 768px){
     .companies{
@@ -497,7 +518,6 @@ section{
         margin-right: 0px;
     }
     .fits{
-        display: flex;
         flex-direction: column;
         overflow-x: hidden;
     }
@@ -509,26 +529,17 @@ section{
         margin: 10px 0; 
         padding: 10px 0;
     }
-    @media (max-width: 1366px){
-        .join-img{
-            width:100%;
-        }
-    }
-    .fits .join {
-        background-position-y: -100px;
-        background-position-x: -100px;
-        margin: 10px;
-        width: 10%;
-        height: auto;
-    }
     .main{
         width: 100%;
     }
     .join img{
         width: 100%;
-        height: auto;
         max-width: 100%;
         margin: 0;
+    }
+    .join-img{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -574,6 +585,7 @@ section{
 .content2 .box1 h1{
     font-size: 16px;
     color: #363F40;
+    font-weight: 900;
 }
 
 .content2 .box1 img{
@@ -585,8 +597,9 @@ section{
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     color: #6F6F6F;
+    padding: 10px 0;
 }
 .fits .join{ 
     padding: 30px;
@@ -619,20 +632,24 @@ section{
 
 .hear p{
     text-align: center;
-    /* margin-bottom: 50px; */
-    padding: 20px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #505050;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: -28px;
 }
 
 .hear .that .mg1{
-    margin-right: 0px;
+    margin-top: 80px;
 }
 
 .para{
     width: 80%;
     margin: 30px auto;
     background: #fff;
-    padding: 1px 30px;
-    /* padding: 4px 10px; */
+    padding: 0px 10px 30px;
 }
 
 .para h1{
@@ -641,7 +658,8 @@ section{
     line-height: 20px;
     text-align: center;
     color: #6F6F6F;
-    padding-top: 40px;
+    padding: 40px 0;
+    /* padding-top: 40px; */
 }
 
 .para p{
@@ -652,6 +670,7 @@ section{
     text-align: center;
     letter-spacing: 0.05em;
     color: #6F6F6F;
+    width: 100%;
 }
 
 .about{
@@ -672,9 +691,10 @@ section{
 }
 
 .about-left p{
-    font-weight: 500;
-    font-size: 16px;
+    /* font-weight: 500; */
+    font-size: 14px;
     width: 650px;
+    color: #505050;
     text-align: justify;
 }
 
@@ -704,12 +724,18 @@ section{
 }
 
 .right-box .right-card h1{
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 900;
+    font-size: 28px;
     line-height: 50px;
     text-align: center;
     color: #363F40;
     padding-top: 40px;
+}
+
+.right-box .right-card p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #6F6F6F;
 }
 
 @media screen and (max-width: 768px){
@@ -801,8 +827,14 @@ section{
 }
 
 .frequent p{
-    text-align: center;
+    font-weight: 400;
     font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #505050;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: -28px;
 }
 
 .frequent form input[type="text"]{
@@ -811,7 +843,7 @@ section{
     font-size: 16px;
     background-color: #F3F3F3;
     border: none;
-    width: 350px;
+    width: 40%;
     margin-top: 50px;
 }
 
@@ -865,34 +897,34 @@ input[type="submit"]{
 
 .general a{
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 18px;   
 }
 
 .general .active{
     position: relative;
-    font-size: 18px;
-    color: #363F40;
+    color: #6F6F6F;
+    font-weight: 900;
     text-align: center;
 }
 
 .general .active::after{
     position: absolute;
     content: "";
-    width: 70px;
-    height: 0.18rem;
+    width: 100%;
+    height: 3px;
     left: 0;
     right: 0;
     margin: auto;
-    top: 2rem;
+    top: 26px;
+    text-align: center;
     background-color: #F2984C;
 }
 
 .general .passive{
-    font-weight: 700;
+    font-weight: 900;
     line-height: 22px;
     text-align: center;
     color: #F38F46;
-    /* padding-top: 15px; */
 }
 
 .frequent .paragraph{
@@ -904,31 +936,34 @@ input[type="submit"]{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    padding: 20px;
+    /* padding: 20px; */
     margin-top: 40px;
     text-align: left;
+    padding: 0px 20px 40px;
+    /* padding: 0px 20px; */
 }
 
 .paragraph-box:hover{
     box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
 }
 .paragraph .paragraph-box h1{
-    font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 18px;
-    line-height: 36px;
-    color: #363F40;
-    padding-left: 10px;
+    line-height: 20px;
+    /* text-align: center; */
+    color: #6F6F6F;
+    padding: 40px 0;
 }
 
 .paragraph .paragraph-box p{
-    text-align: left;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
-    padding-left: 10px;
+    line-height: 18px;
+    text-align: left;
+    letter-spacing: 0.05em;
     color: #505050;
+    width: 100%;
 }
 
 
