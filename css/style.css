@@ -144,6 +144,8 @@ html {
     position: relative;
     display: flex;
     margin-bottom: 0;
+    height: 100%;
+    overflow: hidden;
 }
 .hero .left{
     width: 450px;
@@ -190,7 +192,7 @@ p{
 .hero .left .input input{
     padding: 10px;
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #F3F3F3;
     border: none;
 }
@@ -211,6 +213,7 @@ p{
     background-image: url(/images/Ellipse\ 44.png);
     background-repeat: no-repeat;
     overflow: hidden;
+    /* height: 700px; */
 }
 
 .hero .right .image{
@@ -879,7 +882,7 @@ input[type="submit"]{
 .paragraph .paragraph-box h1{
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 36px;
     color: #363F40;
     padding-left: 10px;
@@ -889,8 +892,51 @@ input[type="submit"]{
     text-align: left;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     padding-left: 10px;
     color: #505050;
 }
+
+
+
+
+
+
+/* Page Two */
+.back{
+    text-align: center;
+    padding: 20px;
+}
+.back a{
+    color: #00AEEF;
+    font-size: 14px;
+}
+
+/* PageThree */
+.left .input h1{
+    font-size: 14px;
+    margin-bottom: -10px;
+}
+
+/* PageFour */
+/* .hero .left .input{
+    display: inline-block;
+} */
+
+/* .hero .left .input input{
+    width: 140px;
+    font-size: 14px;
+} */
+
+/* .hero .left .input .employe{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .left .input .employe a{
+    text-align: center;
+    color: #00AEEF;
+    font-size: 14px;
+    margin-top: 33px;
+} */
