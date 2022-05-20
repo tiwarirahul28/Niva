@@ -18,7 +18,7 @@ html {
     cursor: pointer;
     color: white;
     background: #F2984C;
-    box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
     padding: 10px 20px;
     display: inline-block;
@@ -235,8 +235,9 @@ span{
     position: absolute;
     width: 60px;
     height: auto;
-    right: 10px;
-    top: 500px;
+    right: 1%;
+    /* top: 500px; */
+    bottom: 1%;
     /* position: fixed; */
 
 }
@@ -331,7 +332,7 @@ section{
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .content:hover{
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
 .content .box{
     padding: 30px;
@@ -442,7 +443,7 @@ section{
 }
 
 .card:hover{
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
   
 .right-side .card-container .card img {
@@ -496,10 +497,10 @@ section{
 
 .that .mg1{
     width: 200px;
-    margin-top: 50px;
-    margin-right: 40px;
+    margin: 50px 40px 100px 0;
     text-align: center;
 }
+
 @media (max-width: 1366px){
     .join-img{
         width:100%;
@@ -576,7 +577,7 @@ section{
     margin-bottom: 20px;
 }
 .content2:hover{
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
 .content2 .box1{
     padding: 30px;
@@ -715,7 +716,7 @@ section{
     margin: 16px 0;
 }
 .right-box:hover{
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
 .right-box .right-card{
     text-align: center;
@@ -943,7 +944,7 @@ input[type="submit"]{
 }
 
 .paragraph-box:hover{
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
 .paragraph .paragraph-box h1{
     font-weight: 700;
