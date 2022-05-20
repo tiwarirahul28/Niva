@@ -405,10 +405,9 @@ section{
     cursor: pointer;
 }
 
-.material-icons{
+.arrow a{
     width: 90px;
     font-size: 50px;
-    font-weight: light;
 }
 
 .right-side{
@@ -549,7 +548,7 @@ section{
 }
 
 .main{
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     position: relative;
 }
@@ -610,14 +609,15 @@ section{
     margin-top: 10px;
     width: 100%;
     margin-left: 50px;
-    height: 700px;
-    background-position-y: 0px;
+    /* height: 700px; */
+    background-position-y: 100px;
     background-position-x: 0px;
 }
 
 .join-img{
-    width: 60%;
-    height: 670px;
+    margin-top: 5px;
+    width: max-content;
+    height: 794px;
 }
 .join img{
     width: 100%;
