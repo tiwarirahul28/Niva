@@ -665,6 +665,7 @@ p{
     display: grid;
     grid-template-columns: repeat(2, 2fr);  
     grid-gap: 40px;
+    margin: 50px auto;
 }
 
 .right-box{
