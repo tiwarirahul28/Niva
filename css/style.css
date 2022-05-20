@@ -132,9 +132,9 @@ html {
     padding: 70px 0;
 }
 
-.hero-section{
+/* .hero-section{
     padding: 50px 0;
-}
+} */
 
 .hero{
     display: grid;
@@ -225,12 +225,14 @@ span{
         margin: 0 auto;
     }
     .hero .left{
-        width: 100%;
-        margin-bottom: 40px;
+        /* width: 100%;
+        margin-bottom: 40px; */
+        padding: 20px;
     }
-    .hero .right{
-        width: 100%;
-    }
+    .hero .right {
+        background-position-y: 0px;
+        background-position-x: 0px;
+        margin: 10px;
 }
 
 .section-title{
