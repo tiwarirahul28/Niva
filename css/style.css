@@ -691,7 +691,6 @@ section{
 }
 
 .about-left p{
-    /* font-weight: 500; */
     font-size: 14px;
     width: 650px;
     color: #505050;
@@ -950,14 +949,12 @@ input[type="submit"]{
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
-    /* text-align: center; */
-    color: #6F6F6F;
+    color: #363F40;
     padding: 40px 0;
 }
 
 .paragraph .paragraph-box p{
     font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-align: left;
