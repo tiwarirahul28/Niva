@@ -6,7 +6,7 @@
     text-decoration: none;
     transition: 0.5s;
     font-family: 'Poppins';
-
+    /* overflow: hidden; */
 }
 
 html {
@@ -511,8 +511,15 @@ section{
 }
 
 .main{
-    /* width: 100%; */
+    width: 80%;
+    margin-left: auto;
     position: relative;
+}
+@media (max-width: 1366px){
+    .join-img{width:100%}
+}
+@media (max-width: 768px){
+    .join-img,.main{width:100%}
 }
 
 .fits{
