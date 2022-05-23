@@ -893,9 +893,16 @@ input[type="submit"]{
     align-items: center;
     margin-top: 100px;
 }
+.tabs{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
+.tabs .tabs-link{
+    padding: 20px 0;
+}
 .tab{
-    /* display: flex; */
     flex-wrap: wrap;
     font-style: normal;
     font-weight: 700;
@@ -966,7 +973,7 @@ input[type="submit"]{
 }
 @media screen and (max-width: 768px){
     .tabs label{
-        margin: 50px;
+        margin: auto 18px;
         text-align: center;
     }
 }
