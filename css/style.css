@@ -18,7 +18,7 @@ html {
     cursor: pointer;
     color: white;
     background: #F2984C;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
     border-radius: 10px;
     padding: 10px 20px;
     display: inline-block;
@@ -33,9 +33,11 @@ html {
 .nav-center{
     width: 95vw;
 }
+
 .nav-logo{
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
+
 .nav-header{
     height: auto;
     display: flex;
@@ -83,8 +85,6 @@ html {
     letter-spacing: 1px;
     padding: 20px 20px;
     border-top: 1px solid grey;
-    /* transiton: var(--transition); */
-
 }
 .contact-link{
     text-align: center;
@@ -92,61 +92,55 @@ html {
 }
 
 .contact-link a{
-    padding: 10px 20px;
+    padding: 14px 34px;
 }
+
 @media screen and (min-width: 992px) {
     .navbar {
         height: 80px;
-      }
-      .nav-center {
+    }
+    .nav-center {
         display: flex;
         align-items: center;
-      }
-      .nav-header {
+    }
+    .nav-header {
         padding: 0;
         margin-right: 2rem;
         height: auto;
-      }
-    
-      .nav-btn {
+    }
+
+    .nav-btn {
         display: none;
-      }
-      .nav-links {
+    }
+    .nav-links {
         height: auto !important;
         flex-direction: row;
         align-items: center;
         width: 100%;
-      }
-      .nav-link {
+    }
+    .nav-link {
         padding: 20px;
         border-top: none;
         margin-right: 1rem;
         font-size: 16px;
-      }
-      .contact-link {
+    }
+    .contact-link {
         margin-right: 0;
         margin-left: auto;
-      }
-    
+    }
 }
 
 .section{
-    /* margin-top: 1%; */
     padding: 70px 0;
 }
 
-/* .hero-section{
-    padding: 50px 0;
-} */
-
 .hero{
     display: grid;
-    /* grid-template-columns: repeat(2, 2fr); */
     grid-template-columns: 40% 56%;
     grid-gap: 50px;
 }
 .hero .left{
-    padding-left: 50px;
+    padding-left: 75px;
 }
 
 .hero .left h1{
@@ -154,27 +148,33 @@ html {
     font-size: 28px;
     font-weight: 900;
     line-height: 40px;
-    padding-top: 24px;
+    padding-top: 60px;
 }
-.hero .left p{
-    font-size: 14px;
-    color: #505050;
-    line-height: 16px;
-    font-weight: 400;
-    padding: 14px 0;
-}
+
 span{
     color: #00AEEF;
     font-weight: 900;
 }
 
-    /* p{
-        font-size: 14px;
-        line-height: 18px;
-        color: #505050;
-        margin-top: 10px;
-    } */
+.paragraph-center{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6F6F6F;
+    width: 500px;
+    padding: 10px 0;
+}
 
+@media screen and (max-width: 768px){
+    .paragraph-center{
+        width: 100%;
+    }
+}
+
+.hero .left p{
+    width: 100%;
+}
 .hero .left .input {
     display: flex;
     justify-content: space-around;
@@ -236,10 +236,7 @@ span{
     width: 60px;
     height: auto;
     right: 1%;
-    /* top: 500px; */
     bottom: 1%;
-    /* position: fixed; */
-
 }
 .right img{
     width: 100%;
@@ -253,8 +250,6 @@ span{
         margin: 0 auto;
     }
     .hero .left{
-        /* width: 100%;
-        margin-bottom: 40px; */
         padding: 20px;
     }
     .hero .right {
@@ -316,7 +311,7 @@ section{
 }
 
 .container .boxes{
-    width: 85vw;
+    width: 90vw;
     display: grid;
     grid-template-columns: repeat(4, 4fr);
     grid-gap: 50px;
@@ -393,10 +388,6 @@ section{
 
 .left-side p{
     margin-top: -28px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #505050;
 }
 
 .arrow{
@@ -412,7 +403,6 @@ section{
 
 .right-side{
     height: auto;
-    /* width: 900px; */
     display: block;
     overflow-x: scroll;
     place-items: center;
@@ -432,7 +422,7 @@ section{
   
 .right-side .card-container .card {
     width: 250px;
-    height: 300px;
+    height: 280px;
     margin: 10px;
     display: inline-block;
     margin-right: 20px;
@@ -461,18 +451,16 @@ section{
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 36px;
+    line-height: 28px;
     color: #5C5C5C;
 }
-  
 .right-side .card-container .card .content1 p {
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 14px;
+    letter-spacing: 1;
     text-align: left;
     margin: 0;
-    color: #5C5C5C;;
+    color: #5C5C5C;
 }
-
 .companies{
     width: 100%;
     height: auto;
@@ -521,31 +509,10 @@ section{
         flex-direction: column;
         overflow-x: hidden;
     }
-    .start .boxes1{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin: 10px 0; 
-        padding: 10px 0;
-    }
-    .main{
-        width: 100%;
-    }
-    .join img{
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-    .join-img{
-        width: 100%;
-        height: auto;
-    }
 }
 .content-didi{
     display: grid;
     grid-template-columns: 40% 60%;
-    /* margin: 10px; */
 }
 .content-didi .content-left{
     width: 100%;
@@ -553,6 +520,7 @@ section{
     grid-template-columns: repeat(2, 2fr);
     grid-row-gap: 20px;
     padding-bottom: 50px;
+    margin-left: 20px;
 }
 .content-didi .content-left .content-box-{
     width: 250px;
@@ -560,7 +528,7 @@ section{
     background: #FFFFFF; 
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 50px 0 0 50px;
+    margin: 30px 0 0 55px;
     padding: 30px;
 }
 
@@ -614,27 +582,37 @@ section{
 
 .hear p{
     text-align: center;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #505050;
-    width: 500px;
     margin: 0 auto;
-    margin-top: -28px;
+    margin-top: -30px;
 }
 
-.hear .that .mg1{
+/* .hear .that .mg1{
     margin-top: 80px;
+} */
+.hear .customers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.para{
+.hear .customers .customers-image{
+    width: 100px;
+    margin: 100px 50px 30px 0px;
+    text-align: center;
+}
+.hear .customers .customers-image img{
+    width: 100%;
+}
+.Ubaid{
     width: 80%;
     margin: 30px auto;
     background: #fff;
     padding: 0px 10px 30px;
+    border-radius: 15px;
 }
 
-.para h1{
+.Ubaid h1{
     font-weight: 900;
     font-size: 18px;
     line-height: 20px;
@@ -644,14 +622,8 @@ section{
     /* padding-top: 40px; */
 }
 
-.para p{
-    font-style: normal;
-    /* font-weight: 900; */
-    font-size: 14px;
-    line-height: 28px;
+.Ubaid p{
     text-align: center;
-    letter-spacing: 0.05em;
-    color: #6F6F6F;
     width: 100%;
 }
 
@@ -661,7 +633,7 @@ section{
 }
 
 .about-left{
-    margin-left: 100px;
+    margin-left: 75px;
     padding: 5px;
     padding-top: 4px;
 
@@ -673,9 +645,7 @@ section{
 }
 
 .about-left p{
-    font-size: 14px;
     width: 650px;
-    color: #505050;
     text-align: justify;
 }
 
@@ -694,7 +664,7 @@ section{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    margin: 16px 0;
+    margin: 12px 0;
 }
 .right-box:hover{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
@@ -808,12 +778,6 @@ section{
 }
 
 .frequent p{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    color: #505050;
-    width: 500px;
     margin: 0 auto;
     margin-top: -28px;
 }
@@ -936,18 +900,9 @@ input[type="submit"]{
 }
 
 .paragraph .paragraph-box p{
-    font-style: normal;
-    font-size: 14px;
-    line-height: 18px;
     text-align: left;
-    letter-spacing: 0.05em;
-    color: #505050;
     width: 100%;
 }
-
-
-
-
 
 
 /* Page Two */
@@ -960,9 +915,4 @@ input[type="submit"]{
     font-size: 14px;
 }
 
-/* PageThree */
-/* .left .input h1{
-    font-size: 14px;
-    margin-bottom: -10px;
-} */
 
