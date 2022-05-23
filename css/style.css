@@ -12,11 +12,9 @@
 
 html {
     font-size: 100%;
-}
-
-body{
     scroll-behavior: smooth;
 }
+
 
 .btn{
     cursor: pointer;
@@ -240,7 +238,12 @@ span{
     width: 60px;
     height: auto;
     right: 1%;
+    cursor: pointer;
     bottom: 1%;
+}
+
+.icon img{
+    width: 100%;
 }
 .right img{
     width: 100%;
