@@ -19,3 +19,16 @@ const currentYear = new Date().getFullYear()
 date.textContent = currentYear
 
 
+let slides = document.querySelectorAll('.card');
+let index = 0;
+
+function next(){
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}
+function pre(){
+  slides[index].classList.remove('active');
+  index = (index - 1 + slides.length) % slides.length;
+  slides[index].classList.add('active');
+}

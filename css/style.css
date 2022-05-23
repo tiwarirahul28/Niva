@@ -410,6 +410,13 @@ section{
     width: 90px;
     font-size: 50px;
 }
+/* .arrow a:hover{
+    color: #F38F46;
+} */
+
+.arrow a .arrow-rotate{
+    transform: rotate(180deg)
+}
 
 .right-side{
     height: auto;
@@ -432,7 +439,7 @@ section{
   
 .right-side .card-container .card {
     width: 250px;
-    height: 280px;
+    /* height: 280px; */
     margin: 10px;
     display: inline-block;
     margin-right: 20px;
@@ -454,6 +461,7 @@ section{
 .right-side .card-container .card .content1 {
     height: 30%;
     width: 100%;
+    /* padding: 10px 0; */
     margin-left: 15px;
 }
   
@@ -469,6 +477,7 @@ section{
     letter-spacing: 1;
     text-align: left;
     margin: 0;
+    padding-bottom: 6px;
     color: #5C5C5C;
 }
 
@@ -484,7 +493,6 @@ section{
     color: #5C5C5C;
 }
 .slider{
-    /* height: 250px; */
     margin: auto;
     position: relative;
     width: 90%;
@@ -509,7 +517,7 @@ section{
 }
 .slide img{
     width: 100%;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 .slide img:hover{
     transform: translateZ(20px);
@@ -529,22 +537,6 @@ section{
     }
 }
 
-@media screen and (max-width: 768px){
-    /* .companies{
-        width: 100%;
-        height: auto;
-        margin-top: 40px;
-    }
-    .that .mg1{
-        width: 200px;
-        margin-top: 30px;
-        margin-right: 0px;
-    } */
-    .fits{
-        flex-direction: column;
-        overflow-x: hidden;
-    }
-}
 .content-didi{
     display: grid;
     grid-template-columns: 40% 60%;
@@ -891,81 +883,90 @@ input[type="submit"]{
     }
 }
 
-.general{
-    width: 60%;
-    margin: 70px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.warpper{
+    display:flex;
+    flex-direction: column;
     align-items: center;
-    position: relative;
+    margin-top: 100px;
 }
 
-.general a{
-    margin-top: 20px;
-    font-size: 18px;   
-}
-
-.general .active{
-    position: relative;
-    color: #6F6F6F;
-    font-weight: 900;
-    text-align: center;
-}
-
-.general .active::after{
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 26px;
-    text-align: center;
-    background-color: #F2984C;
-}
-
-.general .passive{
-    font-weight: 900;
+.tab{
+    /* display: flex; */
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #F38F46;
+    margin-top: 30px;
+    margin: 0 40px;
 }
-
-.frequent .paragraph{
-    width: 90%;
-    margin: 0 auto;
+.panels{
+    width: 80%;
+    margin: 0 auto; 
 }
-
-.paragraph .paragraph-box{
+.panel{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    /* padding: 20px; */
     margin-top: 40px;
     text-align: left;
-    padding: 0px 20px 40px;
-    /* padding: 0px 20px; */
+    padding: 0px 20px 10px;
+    display:none;
+    animation: fadein .8s;
 }
-
-.paragraph-box:hover{
+.panel:hover{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
-.paragraph .paragraph-box h1{
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.panel-title{
     font-weight: 700;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 24px;
     color: #363F40;
-    padding: 40px 0;
+    margin-top: 35px;
 }
-
-.paragraph .paragraph-box p{
+.panel p{
     text-align: left;
     width: 100%;
+    padding: 20px 0;
 }
-
-
+.radio{
+    display:none;
+}
+#one:checked ~ .panels #general-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel,
+#five:checked ~ .panels #five-panel,
+#six:checked ~ .panels #six-panel{
+    display:block;
+}
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab,
+#four:checked ~ .tabs #four-tab,
+#five:checked ~ .tabs #five-tab,
+#six:checked ~ .tabs #six-tab{
+    background:#fffffff6;
+    color: #6F6F6F;
+    border-bottom: 3px solid #f38F46;
+}
+@media screen and (max-width: 768px){
+    .tabs label{
+        margin: 50px;
+        text-align: center;
+    }
+}
 /* Page Two */
 .back-btn{
     text-align: center;
