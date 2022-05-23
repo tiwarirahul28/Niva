@@ -634,6 +634,7 @@ section{
         margin-bottom: -6px;
     }
 }
+
 .hear{
     background: rgba(247, 179, 67, 0.05);
     width: 100%;
@@ -645,9 +646,6 @@ section{
     margin-top: -30px;
 }
 
-/* .hear .that .mg1{
-    margin-top: 80px;
-} */
 .hear .customers{
     display: flex;
     justify-content: center;
@@ -685,7 +683,11 @@ section{
     text-align: center;
     width: 100%;
 }
-
+@media screen and (max-width: 768px){
+    .hear .customers .customers-image{
+        margin: 20px 36px;
+    }
+}
 .about{
     width: 100%;
     display: flex;
