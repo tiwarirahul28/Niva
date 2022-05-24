@@ -959,6 +959,12 @@ input[type="submit"]{
     box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
     border-radius: 8.78788px;
 }
+@media screen and (max-width: 1200px){
+    .footer .box-container{
+        margin: 0px 200px;
+        padding: 40px 0;
+    }
+}
 
 @media screen and (max-width: 768px){
     .frequent form input[type="text"]{
@@ -988,6 +994,8 @@ input[type="submit"]{
         padding: 40px 0;
     }
 }
+
+
 
 
 .warpper{
