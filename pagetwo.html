@@ -12,6 +12,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .previous{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .previous a{
+            color: #00AEEF;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <!-- Start of nav -->
@@ -29,10 +39,10 @@
             <!-- Links -->
             <div class="nav-links">
                 <a href="/index.html" class="nav-link">Home</a>
-                <a href="/index.html" class="nav-link">About</a>
-                <a href="/index.html" class="nav-link">Feature</a>
-                <a href="/index.html" class="nav-link">FAQs</a>
-                <div class="contact-link">
+                <a href="/pagetwo.html" class="nav-link">About</a>
+                <a href="/pagethree.html" class="nav-link">Feature</a>
+                <a href="/" class="nav-link">FAQs</a>
+                <div class="contact-link" id="contact-us">
                     <a href="" class="btn">Contact Us</a>
                 </div>
             </div>
@@ -41,43 +51,44 @@
     <!-- End of nav -->
 
     <!-- Start of Hero -->
-    <div class="section">
+    <div class="hero-section">
         <div class="hero">
             <div class="left">
                 <h1><span>Group Health Insurance </span> <br>Solution for your Organisation</h1>
-                <p>Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
+                <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
                 <div class="input">
                     <input type="text" placeholder="Company Name">
                     <div class="merg">
-                        <input type="text" placeholder="Industry Type">
-                        <span>&#129171;</span>
+                        <input id="cars" type="text" placeholder="Industry Type">
+                        <img src="/images/Polygon 1.svg" alt="">
                     </div>
                     <input type="text" placeholder="Number of Live to be Insured (MIN 10)">
                     <div class="merg">
-                        <input type="text" placeholder="Policy Type">
-                        <span>&#129171;</span>
+                        <input id="cars" type="text" placeholder="Policy Type">
+                        <img src="/images/Polygon 1.svg" alt="">
                     </div>
-                    <input type="text" placeholder="Policy State Date">
-                    
+                    <input type="text" placeholder="Policy Start Date">
+
                     <div class="btn-link">
                         <a href="" class="btn">Continue</a>
                     </div>
-                    <div class="back-btn">
+                    <div class="previous">
                         <a href=""> < Back to Previous</a>
                     </div>
                 </div>
             </div>
             <div class="right">
-                <div class="back-img">
-                    <img src="/images/Ellipse 44.png" alt="">
-                </div>
-                <div class="image">
-                    <img src="/images/hero section img - Copy.png" alt="">
-                </div>
+                <img src="/images/hero section img - Copy.png" alt="">
             </div>
         </div>
     </div>
     <!-- End of Hero -->
+
+    <div class="icon">
+        <a href="#contact-us">
+            <img src="/images/banner icon.png" alt="">
+        </a>
+    </div>
     <script src="/Js//App.js"></script>
 
 </body>

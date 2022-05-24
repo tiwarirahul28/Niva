@@ -207,7 +207,6 @@ span{
 .hero .left .input input{
     padding: 10px;
     margin-top: 15px;
-    /* width: 70%; */
     font-size: 14px;
     background-color: #F3F3F3;
     border: none;
@@ -959,6 +958,7 @@ input[type="submit"]{
     box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
     border-radius: 8.78788px;
 }
+
 @media screen and (max-width: 1200px){
     .footer .box-container{
         margin: auto;
@@ -1090,3 +1090,5 @@ input[type="submit"]{
     }
 }
 
+
+/* Page Three */
