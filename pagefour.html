@@ -13,6 +13,47 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="/css/style.css">
     <style>
+        .hero .left .input-1 {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            margin: 10px auto;
+        }
+
+        .merg-1{
+            display: flex;
+            /* width: 175px; */
+        }
+        .merg-1 span{
+            margin-left: -35px;
+            font-size: 26px;
+            color: #6F6F6F;
+            top: 200px;
+        }
+
+        .merg-1 input{
+            width: 172px;
+        }
+
+        .merg-1 img{
+            margin-left: -30px;
+            margin-right: 40px;
+            font-size: 16px;
+        }
+
+        .hero .left .input-1 input{
+            padding: 10px;
+            width: 171px;
+            font-size: 14px;
+            background-color: #F3F3F3;
+            border: none;
+            margin: 8px 0;
+        }
+        .hero .left .input-1 i{
+            font-size: 18px;
+            color: #00AEEF;
+            margin: 18px 10px;
+        }
         .left .employee{
             display: flex;
             justify-content: space-between;
@@ -27,16 +68,9 @@
             margin-top: 70px;
             color: #00AEEF;
         }
-        .hero .left .small-input{
-            display: flex;
-            justify-content: unset;
-            flex-wrap: wrap;
-        }
-        .left .input .small-input input{
-            width: 180px;
-            margin-top: 6px;
-            margin-right: 10px;
-
+        .btn-link {
+            text-align: center;
+            margin-top: 150px;
         }
         .previous{
             text-align: center;
@@ -45,6 +79,26 @@
         .previous a{
             color: #00AEEF;
             font-size: 18px;
+        }
+        @media screen and (max-width:1200px){
+            .left .employee{
+                margin-top: 10px;
+            }
+            .left .employee a{
+                margin-top: 10px;
+                color: #00AEEF;
+            }
+            .merg-1{
+                width: 100%;
+            }
+            .hero .left .input-1 input{
+                width: 88%;
+            }
+            .btn-link{
+                margin-top: 10px;
+            }
+            
+            
         }
     </style>
 </head>
@@ -64,9 +118,9 @@
             <!-- Links -->
             <div class="nav-links">
                 <a href="/index.html" class="nav-link">Home</a>
-                <a href="/" class="nav-link">About</a>
-                <a href="/" class="nav-link">Feature</a>
-                <a href="/" class="nav-link">FAQs</a>
+                <a href="/pagetwo.html" class="nav-link">About</a>
+                <a href="/pagethree.html" class="nav-link">Feature</a>
+                <a href="/pagefour.html" class="nav-link">FAQs</a>
                 <div class="contact-link" id="contact-us">
                     <a href="" class="btn">Contact Us</a>
                 </div>
@@ -85,36 +139,39 @@
                     <h1>Employee</h1>
                     <a href="">+ Add Employee</a>
                 </div>
-                <div class="input">
-                    <div class="merg">
+                <div class="input-1">
+                    <div class="merg-1">
                         <input id="cars" type="text" placeholder="Age Group">
                         <img src="/images/Polygon 1.svg" alt="">
                     </div>
-                    <div class="merg">
+                    <div class="merg-1">
                         <input id="cars" type="text" placeholder="Sum Insured">
                         <img src="/images/Polygon 1.svg" alt="">
                     </div>
-                    <input type="text" placeholder="No. of Members">
-                    <div class="merg">
+                    <div class="merg-1">
+                        <input id="cars" type="text" placeholder="No. of Members">
+                    </div>
+                    <div class="merg-1">
                         <input id="cars" type="text" placeholder="Age Group">
                         <img src="/images/Polygon 1.svg" alt="">
                     </div>
-                    <div class="merg">
+                    <div class="merg-1">
                         <input id="cars" type="text" placeholder="Sum Insured">
                         <img src="/images/Polygon 1.svg" alt="">
                     </div>
-                    <input type="text" placeholder="No. of Members">
+                        <input type="text" placeholder="No. of Members">
+                        <i class="fas fa-solid fa-trash"></i>
+                    </div>
+                    <div class="btn-link">
+                        <a href="" class="btn">Continue</a>
+                    </div>
+                    <div class="previous">
+                        <a href=""> < Back to Previous</a>
+                    </div>
                 </div>
-
-                <div class="btn-link">
-                    <a href="" class="btn">Continue</a>
+                <div class="right">
+                    <img src="/images/hero section img - Copy.png" alt="">
                 </div>
-                <div class="previous">
-                    <a href=""> < Back to Previous</a>
-                </div>
-            </div>
-            <div class="right">
-                <img src="/images/hero section img - Copy.png" alt="">
             </div>
         </div>
     </div>
