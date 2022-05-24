@@ -250,6 +250,20 @@ span{
     border-radius: 25px;
 }
 
+@media screen and (max-width: 1200px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .hero .left{
+        padding: 20px;
+    }
+    .hero .left h1{
+        padding-top: 0;
+    }
+}
+
 @media screen and (max-width: 768px){
     .hero{
         display: flex;
@@ -361,6 +375,13 @@ section{
     line-height: 20px;
     color: #6F6F6F;
     padding: 10px 0;
+}
+
+@media screen and (max-width: 1200px){
+    .container .boxes{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -616,9 +637,13 @@ section{
     }
     .content-didi .content-left{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 2fr);
         margin-left: 0;
-        margin: auto;
+        margin: 40px 0;
+    }
+    .content-didi .content-right{
+        margin-left: 10px;
+        margin-bottom: 0px;
     }
 }
 @media screen and (max-width: 768px){
@@ -804,7 +829,25 @@ section{
     color: #6F6F6F;
 }
 
-
+@media screen and (max-width: 1200px){
+    .about{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-self: unset;
+    }
+    .about-left{
+        margin: 10px;
+        padding: 5px;
+    }
+    .about-left p{
+        width: 100%;
+        text-align: justify;
+    }
+    .about-right{
+        margin: 0 auto;
+    }
+}
 
 @media screen and (max-width: 768px){
     .about{
@@ -832,10 +875,6 @@ section{
     }
     .right-box{
         margin-top: 50px;
-    }
-    .footer .box-container{
-        margin: 0px 60px;
-        padding: 40px 0;
     }
 }
 
@@ -944,6 +983,10 @@ input[type="submit"]{
         box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
         border-radius: 8.78788px;
     }
+    .footer .box-container{
+        margin: 0px 60px;
+        padding: 40px 0;
+    }
 }
 
 
@@ -1039,23 +1082,3 @@ input[type="submit"]{
     }
 }
 
-@media screen and (max-width: 1200px){
-    .container .boxes{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-row-gap: 0px;
-    }
-    .about{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-self: unset;
-    }
-    .about-left{
-        margin: 10px;
-        padding: 5px;
-    }
-    .about-right{
-        margin: 0 auto;
-    }
-}
