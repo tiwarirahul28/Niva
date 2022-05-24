@@ -572,9 +572,9 @@ section{
     grid-template-columns: repeat(2, 2fr);
     grid-row-gap: 40px;
     grid-column-gap: 40px;
-    /* grid-gap: 50px; */
     margin: 90px 0 40px 110px;
 }
+
 .content-didi .content-left .content-box-{
     width: 250px;
     height: 250px;
@@ -616,9 +616,9 @@ section{
     background-image: url(/images/Ellipse\ 44.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    margin-left: 150px;
-    margin-bottom: -100px;
+    /* height: 100%; */
+    margin-left: 250px;
+    /* margin-bottom: -100px; */
 }
 .content-didi .content-right .didi{
     width: 60%;
@@ -1089,6 +1089,3 @@ input[type="submit"]{
         text-align: center;
     }
 }
-
-
-/* Page Three */
