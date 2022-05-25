@@ -423,7 +423,6 @@ section{
 .arrow{
     display: flex;
     height: 50px;
-    /* background: #fff; */
     margin-top: 220px;
     margin-left: -495px;
     margin-right: 347px;
@@ -433,17 +432,15 @@ section{
     margin-right: 10px;
     background: #fff;
     border: none;
+    cursor: pointer;
 }
+
 .arrow-rotate{
     transform: rotate(180deg);
     margin-top: -12px;
 }
 @media screen and (max-width:1200px){
-    .arrow{
-        margin: 20px 0;
-        margin-left: 10px;
-        /* margin-right: 47px; */
-    }
+    
 }
 .right-side{
     height: auto;
@@ -513,15 +510,6 @@ section{
         display: flex;
         flex-direction: column;
     }
-    /* .right-side .card-container .card {
-        width: 250px;
-        margin: 10px;
-        display: inline-block;
-        margin-right: 20px;
-        background: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-    } */
 }
 
 .horizontal-slider{
@@ -682,6 +670,10 @@ section{
 @media (max-width: 1366px){
     .didi{
         width:100%;
+    }
+    .arrow{
+        margin: 20px 0;
+        margin-left: 10px;
     }
     .arrow-rotate{
         transform: rotate(180deg)
