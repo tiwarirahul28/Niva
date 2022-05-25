@@ -15,7 +15,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .btn{
     cursor: pointer;
     color: white;
@@ -25,6 +24,66 @@ html {
     padding: 10px 20px;
     display: inline-block;
 }
+
+.paragraph-center{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6F6F6F;
+    width: 500px;
+    padding: 10px 0;
+}
+
+.section-center{
+    position: relative;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 4px;
+    font-weight: 900;
+}
+
+.section-center::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0rem;
+    background-color: #F2984C;
+}
+
+.section-left{
+    position: relative;
+    font-size: 28px;
+    padding-bottom: 40px;
+    padding-top: 4px;
+    font-weight: 900;
+}
+
+.section-left::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    top: 0rem;
+    text-align: left;
+    background-color: #F2984C;
+}
+
+@media screen and (max-width: 768px){
+    .paragraph-center{
+        width: 100%;
+    }
+}
+
+/* start of navbar */
 
 .navbar{
     display: flex;
@@ -131,16 +190,18 @@ html {
         margin-left: auto;
     }
 }
+/* end of navbar */
 
-.section{
-    padding: 70px 0;
-}
+
+
+/* start of hero */
 
 .hero{
     display: grid;
     grid-template-columns: 40% 56%;
     grid-gap: 50px;
 }
+
 .hero .left{
     padding-left: 75px;
 }
@@ -158,25 +219,10 @@ span{
     font-weight: 900;
 }
 
-.paragraph-center{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6F6F6F;
-    width: 500px;
-    padding: 10px 0;
-}
-
-@media screen and (max-width: 768px){
-    .paragraph-center{
-        width: 100%;
-    }
-}
-
 .hero .left p{
     width: 100%;
 }
+
 .hero .left .input {
     display: flex;
     justify-content: space-around;
@@ -187,6 +233,7 @@ span{
 .merg{
     display: flex;
 }
+
 .merg span{
     margin-left: -35px;
     font-size: 26px;
@@ -244,6 +291,7 @@ span{
 .icon img{
     width: 100%;
 }
+
 .right img{
     width: 100%;
     border-radius: 25px;
@@ -281,49 +329,10 @@ span{
         padding-top: 0;
     }
 }
+/* end of hero */
 
-.section-center{
-    position: relative;
-    font-size: 28px;
-    text-align: center;
-    padding-bottom: 40px;
-    padding-top: 4px;
-    font-weight: 900;
-}
 
-.section-center::after{
-    position: absolute;
-    content: "";
-    width: 100px;
-    height: 3px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 0rem;
-    background-color: #F2984C;
-}
-
-.section-left{
-    position: relative;
-    font-size: 28px;
-    padding-bottom: 40px;
-    padding-top: 4px;
-    font-weight: 900;
-}
-
-.section-left::after{
-    position: absolute;
-    content: "";
-    width: 100px;
-    height: 3px;
-    left: 0;
-    right: 0;
-    margin-left: 0;
-    top: 0rem;
-    text-align: left;
-    background-color: #F2984C;
-}
-
+/* Start of Group Health Insurance */
 section{
     background: rgba(0, 174, 239, 0.02);  
     padding: 70px 0;
@@ -349,9 +358,11 @@ section{
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .content:hover{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
+
 .content .box{
     padding: 30px;
 }
@@ -384,11 +395,11 @@ section{
 }
 
 @media screen and (max-width: 768px){
-    .div{
+    .health-div{
         display: flex;
         flex-direction: column;
     }
-    .div .left-side{
+    .health-div .left-side{
         padding-left: 0px;
         margin-bottom: 20px;
     }
@@ -401,17 +412,20 @@ section{
         margin: 20px auto;
     }
 }
+/* end of Group Health Insurance */
 
-.why{
+
+/* Start of Why choose Niva Bupa Health Insruance? */
+.health{
     padding: 100px 5%;
 }
 
-.div{
+.health-div{
     width: 100%;
     display: flex;
 }
 
-.div .left-side{
+.health-div .left-side{
     display: flex;
     flex-direction: column;
 }
@@ -439,9 +453,7 @@ section{
     transform: rotate(180deg);
     margin-top: -12px;
 }
-@media screen and (max-width:1200px){
-    
-}
+
 .right-side{
     height: auto;
     display: block;
@@ -464,7 +476,6 @@ section{
   
 .right-side .card-container .card {
     width: 250px;
-    /* height: 280px; */
     margin: 10px;
     display: inline-block;
     margin-right: 20px;
@@ -486,7 +497,6 @@ section{
 .right-side .card-container .card .content1 {
     height: 30%;
     width: 100%;
-    /* padding: 10px 0; */
     margin-left: 15px;
 }
   
@@ -497,6 +507,7 @@ section{
     line-height: 28px;
     color: #5C5C5C;
 }
+
 .right-side .card-container .card .content1 p {
     font-size: 14px;
     letter-spacing: 1;
@@ -505,17 +516,22 @@ section{
     padding-bottom: 6px;
     color: #5C5C5C;
 }
+
 @media screen and (max-width:1200px){
-    .div{
+    .health-div{
         display: flex;
         flex-direction: column;
     }
 }
+/* Start of Why choose Niva Bupa Health Insruance? */
 
+
+/* Start of Companies that trust us */
 .horizontal-slider{
     display: grid;
     place-items: center;
 }
+
 .horizontal-slider h1{
     font-weight: 900;
     font-size: 18px;
@@ -523,6 +539,7 @@ section{
     text-align: center;
     color: #5C5C5C;
 }
+
 .slider{
     margin: auto;
     position: relative;
@@ -531,28 +548,34 @@ section{
     overflow: hidden;
     place-items: center;
 }
+
 .slide-track{
     display: flex;
     width: calc(250px * 18);
     animation: scroll 40s linear infinite;
     margin: 30px 0 140px 0px;
 }
+
 .slide-track:hover{
     animation-play-state: paused;
 }
+
 .slide{
     display: flex;
     align-items: center;
     padding: 24px;
     perspective: 100px;
 }
+
 .slide img{
     width: 100%;
     transition: transform 0.5s;
 }
+
 .slide img:hover{
     transform: translateZ(20px);
 }
+
 @keyframes scroll{
     0%{
         transform: translateX(0);
@@ -561,11 +584,15 @@ section{
         transform: translateX(calc(-250px * 9));
     }
 }
+/* End of Companies that trust u */
 
+
+/* Start of Benefits of joing Niva Bupa Health Insurance */
 .content-didi{
     display: grid;
     grid-template-columns: 40% 60%;
 }
+
 .content-didi .content-left{
     width: 100%;
     display: grid;
@@ -616,19 +643,20 @@ section{
     background-image: url(/images/Ellipse\ 44.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 100%; */
     margin-left: 250px;
-    /* margin-bottom: -100px; */
 }
+
 .content-didi .content-right .didi{
     width: 60%;
     height: 100%;
 }
+
 .content-didi .content-right .didi img{
     width: 100%;
     height: 100%;
     margin-bottom: -6px;
 }
+
 @media screen and (max-width: 1200px){
     .content-didi{
         display: flex;
@@ -679,10 +707,14 @@ section{
         transform: rotate(180deg)
     }
 }
+/* end of Benefits of joing Niva Bupa Health Insurance */
 
+
+/* Start of Hear it from our customers */
 .hear{
     background: rgba(247, 179, 67, 0.05);
     width: 100%;
+    padding: 70px 0;
 }
 
 .hear p{
@@ -690,19 +722,23 @@ section{
     margin: 0 auto;
     margin-top: -30px;
 }
+
 .customers{
     display:flex;
     flex-direction: column;
     align-items: center;
 }
+
 .custom-image{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .custom-image .custom-link{
     padding: 10px 0;
 }
+
 .person-image{
     cursor: pointer;
     padding:10px 20px;
@@ -714,12 +750,14 @@ section{
     margin-bottom: 50px;
     position: relative;
 }
+
 .person-image img{
     filter: grayscale(1);
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
+
 .circle-blue{
     background: #6cc1fc;
     width: 120px;
@@ -731,6 +769,7 @@ section{
     margin-top: 0px;
     opacity: 0;
 }
+
 .circle-orange{
     background: #f38f46;
     width: 120px;
@@ -747,6 +786,7 @@ section{
     width: 80%;
     margin: 0 auto; 
 }
+
 .ethinos{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -757,6 +797,7 @@ section{
     display:none;
     animation: fadein .8s;
 }
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -765,6 +806,7 @@ section{
         opacity:1;
     }
 }
+
 .panel-heading{
     font-weight: 900;
     font-size: 18px;
@@ -773,14 +815,17 @@ section{
     color: #6F6F6F;
     padding: 20px 0;
 }
+
 .ethinos p{
     text-align: center;
     width: 100%;
     padding: 20px 0;
 }
+
 .radio{
     display:none;
 }
+
 #eleven:checked ~ .ubaid #custom-eleven,
 #seven:checked ~ .ubaid #custom-seven,
 #eight:checked ~ .ubaid #custom-eight,
@@ -788,6 +833,7 @@ section{
 #ten:checked ~ .ubaid #custom-ten{
     display:block;
 }
+
 #eleven:checked ~ .custom-image #eleven-custom *,
 #seven:checked ~ .custom-image #seven-custom *,
 #eight:checked ~ .custom-image #eight-custom *,
@@ -802,9 +848,182 @@ section{
         margin: 0 auto;
     }
 }
+/* end of Hear it from our customers */
+
+
+/* Start of FAQs */
+.frequent{
+    width: 100%;
+    padding: 14px 5%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.frequent p{
+    margin: 0 auto;
+    margin-top: -28px;
+}
+
+.frequent form input[type="text"]{
+    padding: 8px;
+    margin-top: 15px;
+    font-size: 16px;
+    background-color: #F3F3F3;
+    border: none;
+    width: 40%;
+    margin-top: 50px;
+}
+
+input[type="submit"]{
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color: #F2984C;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    margin-left: -10px;
+    box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
+    border-radius: 8.78788px;
+}
+
+.warpper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.tabs{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tabs .tabs-link{
+    padding: 20px 0;
+}
+
+.tab{
+    cursor: pointer;
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #F38F46;
+    margin-top: 30px;
+    margin: 0 40px;
+}
+
+.panels{
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.panel{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 40px;
+    text-align: left;
+    padding: 0px 20px 10px;
+    display:none;
+    animation: fadein .8s;
+}
+
+.panel:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.panel-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #363F40;
+    margin-top: 35px;
+}
+
+.panel p{
+    text-align: left;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.radio{
+    display:none;
+}
+#one:checked ~ .panels #general-panel,
+#two:checked ~ .panels #payment-panel,
+#three:checked ~ .panels #account-panel,
+#four:checked ~ .panels #pricing-panel,
+#five:checked ~ .panels #support-panel,
+#six:checked ~ .panels #claims-panel{
+    display:block;
+}
+#one:checked ~ .tabs #link-one,
+#two:checked ~ .tabs #link-two,
+#three:checked ~ .tabs #link-three,
+#four:checked ~ .tabs #link-four,
+#five:checked ~ .tabs #link-five,
+#six:checked ~ .tabs #link-six{
+    background:#fffffff6;
+    color: #6F6F6F;
+    border-bottom: 3px solid #f38F46;
+}
+@media screen and (max-width: 768px){
+    .tabs label{
+        margin: auto 18px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .frequent form input[type="text"]{
+        padding: 8px;
+        margin-top: 15px;
+        font-size: 16px;
+        background-color: #F3F3F3;
+        border: none;
+        width: 200px;
+        margin-top: 50px;
+    }
+    
+    input[type="submit"]{
+        width: 80px;
+        height: 43px;
+        border: none;
+        background-color: #F2984C;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        margin-left: -8px;
+        box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
+        border-radius: 8.78788px;
+    }
+    .footer .box-container{
+        margin: 0px 60px;
+        padding: 40px 0;
+    }
+}
+/* end of FAQs */
+
+
+/* Start of About */
 .about{
     width: 100%;
     display: flex;
+    padding: 70px 0;
 }
 
 .about-left{
@@ -841,9 +1060,11 @@ section{
     border-radius: 15px;
     margin: 12px 0;
 }
+
 .right-box:hover{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
 }
+
 .right-box .right-card{
     text-align: center;
     margin: 10px;
@@ -912,7 +1133,10 @@ section{
         margin-top: 50px;
     }
 }
+/* end of About */
 
+
+/* Start of footer */
 .footer{
     background: #F3FCFF;    
 }
@@ -960,41 +1184,6 @@ section{
     text-decoration: underline;
 }
 
-.frequent{
-    width: 100%;
-    padding: 14px 5%;
-    padding-top: 50px;
-    text-align: center;
-}
-
-.frequent p{
-    margin: 0 auto;
-    margin-top: -28px;
-}
-
-.frequent form input[type="text"]{
-    padding: 8px;
-    margin-top: 15px;
-    font-size: 16px;
-    background-color: #F3F3F3;
-    border: none;
-    width: 40%;
-    margin-top: 50px;
-}
-
-input[type="submit"]{
-    width: 120px;
-    height: 40px;
-    border: none;
-    background-color: #F2984C;
-    outline: none;
-    cursor: pointer;
-    color: #fff;
-    margin-left: -10px;
-    box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
-    border-radius: 8.78788px;
-}
-
 @media screen and (max-width: 1200px){
     .footer .box-container{
         margin: auto;
@@ -1003,125 +1192,9 @@ input[type="submit"]{
 }
 
 @media screen and (max-width: 768px){
-    .frequent form input[type="text"]{
-        padding: 8px;
-        margin-top: 15px;
-        font-size: 16px;
-        background-color: #F3F3F3;
-        border: none;
-        width: 200px;
-        margin-top: 50px;
-    }
-    
-    input[type="submit"]{
-        width: 80px;
-        height: 43px;
-        border: none;
-        background-color: #F2984C;
-        outline: none;
-        cursor: pointer;
-        color: #fff;
-        margin-left: -8px;
-        box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
-        border-radius: 8.78788px;
-    }
     .footer .box-container{
         margin: 0px 60px;
         padding: 40px 0;
     }
 }
-
-
-
-
-.warpper{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-}
-.tabs{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.tabs .tabs-link{
-    padding: 20px 0;
-}
-.tab{
-    cursor: pointer;
-    flex-wrap: wrap;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: #F38F46;
-    margin-top: 30px;
-    margin: 0 40px;
-}
-.panels{
-    width: 80%;
-    margin: 0 auto; 
-}
-.panel{
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    margin-top: 40px;
-    text-align: left;
-    padding: 0px 20px 10px;
-    display:none;
-    animation: fadein .8s;
-}
-.panel:hover{
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.07);
-}
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-.panel-title{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    color: #363F40;
-    margin-top: 35px;
-}
-.panel p{
-    text-align: left;
-    width: 100%;
-    padding: 20px 0;
-}
-.radio{
-    display:none;
-}
-#one:checked ~ .panels #general-panel,
-#two:checked ~ .panels #payment-panel,
-#three:checked ~ .panels #account-panel,
-#four:checked ~ .panels #pricing-panel,
-#five:checked ~ .panels #support-panel,
-#six:checked ~ .panels #claims-panel{
-    display:block;
-}
-#one:checked ~ .tabs #link-one,
-#two:checked ~ .tabs #link-two,
-#three:checked ~ .tabs #link-three,
-#four:checked ~ .tabs #link-four,
-#five:checked ~ .tabs #link-five,
-#six:checked ~ .tabs #link-six{
-    background:#fffffff6;
-    color: #6F6F6F;
-    border-bottom: 3px solid #f38F46;
-}
-@media screen and (max-width: 768px){
-    .tabs label{
-        margin: auto 18px;
-        text-align: center;
-    }
-}
+/* end of footer */
