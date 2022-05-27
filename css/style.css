@@ -521,6 +521,7 @@ section{
 
 .arrow{
     display: flex;
+    margin-top: 80px;
 }
 
 .arrow button{
@@ -616,6 +617,10 @@ section{
         display: flex;
         flex-direction: column;
     }
+    .arrow{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
 }
 /* Start of Why choose Niva Bupa Health Insruance? */
 
@@ -685,7 +690,6 @@ section{
 .content-didi{
     display: grid;
     grid-template-columns: 40% 60%;
-    /* height: ; */
 }
 
 .content-didi .content-left{
@@ -743,13 +747,13 @@ section{
 }
 
 .content-didi .content-right .didi{
-    width: 60%;
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
 }
 
 .content-didi .content-right .didi img{
-    width: 100%;
-    /* height: 100%; */
+    width: 70%;
+    height: 100%;
     max-width: 100%;
     margin-bottom: -6px;
 }
@@ -795,13 +799,6 @@ section{
 @media (max-width: 1366px){
     .didi{
         width:100%;
-    }
-    .arrow{
-        margin: 20px 0;
-        margin-left: 10px;
-    }
-    .arrow-rotate{
-        transform: rotate(180deg)
     }
 }
 /* end of Benefits of joing Niva Bupa Health Insurance */
@@ -942,7 +939,11 @@ section{
     filter: grayscale(0);
     opacity: 1;
 }
-
+@media screen and (max-width: 1200px){
+    .custom-image{
+        margin-bottom: 0;
+    }
+}
 @media screen and (max-width: 768px){
     .person-image{
         margin: 0 auto;
