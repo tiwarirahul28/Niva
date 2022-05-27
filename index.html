@@ -66,7 +66,7 @@
                             <span></span>
                         </div>
                         <div class="input-field">
-                            <input type="number" id="phone"  value="+91 ">
+                            <input type="number" id="phone" placeholder="9385647521" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                             <div class="input-number">+91</div>
                             <span></span>
                         </div>
@@ -679,23 +679,15 @@
         }
 
         if(phoneBool && numBool && industryBool && companyBool){
-            window.location.href = '/pagetwo.html';
+            window.location = '/pagetwo.html';
         }
-
-        // if(pass1Value==""){
-        //     setError(pass1,"Policy date can't be blank");
-        // }else{
-        //     setSuccess(pass1);
-        // }
     }
 
     function setError(u, msg){
-    var parentBox =  u.parentElement;
-    parentBox.className="input-field error";
-    var span =  parentBox.querySelector("span");
-    // var fa = parentBox.querySelector(".fa");
-    span.innerText=msg;
-    // fa.className="fa fa-exclamation-circle";
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field error";
+        var span =  parentBox.querySelector("span");
+        span.innerText=msg;
     }
 
     function setSuccess(u){

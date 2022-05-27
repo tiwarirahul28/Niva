@@ -75,24 +75,24 @@
                 <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
                 <div class="container">
                     <h2>Who all to be covered in Policy?</h2>
-                    <form method="post" action="/pagethree.html" class="form-box" onsubmit="formsubmit()">
+                    <form class="form-box">
                         <div class="input-field">
-                            <input type="text" id="empolyee" placeholder="Empolyee Name">
+                            <input type="text" id="empolyee" placeholder="Empolyee Name" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
                             <i class="fa " aria-hidden="true"></i>
                             <span></span>
                         </div>
                         <div class="input-field merg">
-                            <input type="text" id="spouse" placeholder="Empolyee & Spouse">
+                            <input type="text" id="spouse" placeholder="Empolyee & Spouse" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
                             <i class="fa " aria-hidden="true"></i>
                             <span></span>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="kids" placeholder="Empolyee, Spouse & Kids">
+                            <input type="text" id="kids" placeholder="Empolyee, Spouse & Kids" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
                             <i class="fa " aria-hidden="true"></i>
                             <span></span>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="parents" placeholder="Empolyee, Spouse, Kids & Parents/Parents in Laws">
+                            <input type="text" id="parents" placeholder="Empolyee, Spouse, Kids & Parents/Parents in Laws" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
                             <i class="fa " aria-hidden="true"></i>
                             <span></span>
                         </div>                        
@@ -139,42 +139,50 @@
         var parentsValue = parents.value.trim();
         var spouseValue = spouse.value.trim();
         
+        var employeeBool = false;
+        var kidsBool = false;
+        var parentsBool = false;
+        var spouseBool = false;
+
         if(empolyeeValue==""){
             setError(empolyee,"Empolyee Name can't be blank");
         }else{
             setSuccess(empolyee);
+            employeeBool = true;
         }
         if(spouseValue==""){
             setError(spouse,"Empolyee & Spouse can't be blank");
         }else{
             setSuccess(spouse);
+            spouseBool = true;
         }
         if(kidsValue == ''){
             setError(kids, "Empolyee Spouse & kids can't be blank")
         }else{
             setSuccess(kids);
+            kidsBool = true;
         }
         if(parentsValue == ''){
             setError(parents, "Empolyee, Spouse, Kids & Parents/Parents in Laws")
         }else{
             setSuccess(parents);
+            parentsBool = true;
+        }
+        if(employeeBool && kidsBool && parentsBool && spouseBool){
+            window.location = '/pagefour.html'
         }
     }
 
     function setError(u, msg){
-    var parentBox =  u.parentElement;
-    parentBox.className="input-field error";
-    var span =  parentBox.querySelector("span");
-    // var fa = parentBox.querySelector(".fa");
-    span.innerText=msg;
-    // fa.className="fa fa-exclamation-circle";
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field error";
+        var span =  parentBox.querySelector("span");
+        span.innerText=msg;
     }
 
     function setSuccess(u){
         var parentBox =  u.parentElement;
         parentBox.className="input-field success";
-        // var fa = parentBox.querySelector(".fa");
-        // fa.className="fa fa-check-circle";
     }
 
     </script>

@@ -58,7 +58,7 @@
                 <div class="container">
                     <form method="post" action="/pagethree.html" class="form-box">
                         <div class="input-field">
-                            <input type="name" id="company" placeholder="Company Name">
+                            <input type="text" id="company" placeholder="Company Name" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
                             <span></span>
                         </div>
                         <div class="input-field">
@@ -73,7 +73,7 @@
                             <span></span>
                         </div>
                         <div class="input-field">
-                            <input type="number" id="num" placeholder="Number of Lives to be Insured (Min 10)">
+                            <input type="text" id="num" placeholder="Number of Lives to be Insured (Min 10)" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                             <span></span>
                         </div>
             
@@ -85,6 +85,7 @@
                                 <option value="Automobile">Automobile</option>
                                 <option value="Agriculture">Agriculture</option>
                             </select>
+                            <img src="/images/Polygon 1.svg" alt="dropdown">
                             <span></span>
                         </div>
                         <div class="input-field">
@@ -130,34 +131,48 @@
         var policyValue = policy.value.trim();
         var pass1Value = pass1.value.trim();
         
+        var companyBool = false;
+        var numBool = false;
+        var industryBool = false;
+        var phoneBool = false;
+        var pass1Bool = false;
+
         if(companyValue==""){
             setError(company,"Company Name can't be blank");
         }else{
             setSuccess(company);
+            companyBool = true;
         }
 
         if(industryValue == ''){
             setError(industry, " Industry Type can't be blank")
         }else{
             setSuccess(industry);
+            industryBool = true;
         }
 
         if(numValue == ''){
             setError(num, " Number can't be blank")
         }else{
             setSuccess(num);
+            numBool = true;
         }
 
         if(policyValue == ''){
             setError(policy, " policy Type can't be blank")
         }else{
             setSuccess(policy);
+            phoneBool = true;
         }
 
         if(pass1Value==""){
             setError(pass1,"Policy date can't be blank");
         }else{
             setSuccess(pass1);
+            pass1Bool = true;
+        }
+        if(phoneBool && numBool && industryBool && companyBool && pass1Bool){
+            window.location = '/pagethree.html';
         }
     }
 
