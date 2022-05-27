@@ -47,7 +47,7 @@
                 <div class="container">
                     <form class="form-box">
                         <div class="input-field">
-                            <input type="text" id="company" placeholder="Company Name" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
+                            <input type="text" id="company" placeholder="Company Name">
                             <span></span>
                         </div>
                         <div class="input-field">
@@ -164,13 +164,13 @@
                 <p class="paragraph-center"> Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
                 <div class="arrow">
                     <button class="prev">
-                        <svg class="arrow-icon">
-                            <use xlink:href="/images/sprite.svg#arrow-left"></use>
-                        </svg>
+                        <svg width="73" height="36" viewBox="0 0 73 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M73 18H1M1 18L18 1M1 18L18 35"/>
+                        </svg>                            
                     </button>
                     <button class="next">
-                        <svg class="arrow-icon">
-                            <use xlink:href="/images/sprite.svg#arrow-right"></use>
+                        <svg width="73" height="36" viewBox="0 0 73 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 18H72M72 18L55 1M72 18L55 35"/>
                         </svg>
                     </button>
                 </div>
@@ -628,6 +628,16 @@
                 }
             });
         });
+
+        $(document).on('keypress', '#company', function (event) {
+            var regex = new RegExp("^[a-zA-Z ]+$");
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if (!regex.test(key)) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
 
         document.getElementById("submit").addEventListener("click",function(event){
             event.preventDefault();

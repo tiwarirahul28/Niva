@@ -536,12 +536,20 @@ section{
 }
 .arrow button svg{
     width: 100%;
-    fill: #c1c1c1;
+    /* fill: #c1c1c1; */
 }
 
-.arrow button svg:hover{
+/* .arrow button svg:hover{
     fill: #F2984C !important;
     transition: 0.1s;
+} */
+
+.arrow button svg path{
+    stroke: #c1c1c1;
+}
+
+.arrow button:hover svg path{
+    stroke: #F2984C;
 }
 
 .right-side{
