@@ -976,7 +976,7 @@ section{
 }
 
 .frequent form input[type="submit"]{
-    width: 120px;
+    width: 35%;
     height: 40px;
     border: none;
     background-color: #F2984C;
@@ -1101,16 +1101,7 @@ section{
     }
     
     .frequent form input[type="submit"]{
-        width: 80px;
-        height: 43px;
-        border: none;
-        background-color: #F2984C;
-        outline: none;
-        cursor: pointer;
-        color: #fff;
-        margin-left: -8px;
-        box-shadow: 0px 3px 21px 5px rgba(243, 143, 70, 0.18);
-        border-radius: 8.78788px;
+        width: 35%;
     }
     .footer .box-container{
         margin: 0px 60px;
