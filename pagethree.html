@@ -6,25 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PageThree</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="/css/style.css">
     <style>
-        .left .input h1{
+        .container h2{
             font-size: 16px;
             color: #6F6F6F;
-            margin: -44px 0 -10px;
+            margin-top: 20px;
             font-weight: 900;
         }
-        .left .input .merg input{
+        .merg input{
             background-color: #F7B343;
         }
-        .left .input .merg input::placeholder {
+        .merg input::placeholder {
             color: #fff;
-        }
+        } 
         .previous{
             text-align: center;
             margin-top: 30px;
@@ -58,9 +56,9 @@
             <!-- Links -->
             <div class="nav-links">
                 <a href="/index.html" class="nav-link">Home</a>
-                <a href="/pagetwo.html" class="nav-link">About</a>
-                <a href="/pagethree.html" class="nav-link">Feature</a>
-                <a href="/pagefour.html" class="nav-link">FAQs</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Feature</a>
+                <a href="#" class="nav-link">FAQs</a>
                 <div class="contact-link" id="contact-us">
                     <a href="" class="btn">Contact Us</a>
                 </div>
@@ -75,21 +73,36 @@
             <div class="left">
                 <h1><span>Group Health Insurance </span> <br>Solution for your Organisation</h1>
                 <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
-                <div class="input">
-                    <h1>Who all to be covered in Policy?</h1>
-                    <input type="text" placeholder="Employee Only">
-                    <div class="merg">
-                        <input id="cars" type="text" placeholder="Employee & Spouse">
-                    </div>
-                    <input type="text" placeholder="Employee, Spouse & Kids">
-                    <input type="text" placeholder="Employee, Spouse, Kids & Parents/Parents in Laws">
-
-                    <div class="btn-link">
-                        <a href="" class="btn">Continue</a>
-                    </div>
-                    <div class="previous">
-                        <a href=""> < Back to Previous</a>
-                    </div>
+                <div class="container">
+                    <h2>Who all to be covered in Policy?</h2>
+                    <form method="post" action="/pagethree.html" class="form-box" onsubmit="formsubmit()">
+                        <div class="input-field">
+                            <input type="text" id="empolyee" placeholder="Empolyee Name">
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="input-field merg">
+                            <input type="text" id="spouse" placeholder="Empolyee & Spouse">
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="kids" placeholder="Empolyee, Spouse & Kids">
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="parents" placeholder="Empolyee, Spouse, Kids & Parents/Parents in Laws">
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>                        
+                        <div class="btn-link ">
+                            <input type="submit" id="submit" value="continue" style="border-radius: 10px;padding: 14px 100px;background: #F2984C;color: #fff;font-size: 16px;cursor: pointer; border: none;">
+                        </div>
+                        <div class="previous">
+                            <a href="/pagetwo.html"> < Back to Previous</a>
+                        </div>  
+                    </form>
                 </div>
             </div>
             <div class="right">
@@ -106,6 +119,65 @@
     </div>
     <!-- End of Hero -->
     <script src="/Js//App.js"></script>
+    <script>
+        function formsubmit(){
+            console.log('FormData')
+        }
+        document.getElementById("submit").addEventListener("click",function(event){
+            event.preventDefault();
+            checkData();
+        });
+
+    var empolyee = document.getElementById("empolyee");
+    var kids = document.getElementById("kids");
+    var parents = document.getElementById("parents");
+    var spouse = document.getElementById("spouse");
+
+    function checkData(){
+        var empolyeeValue = empolyee.value.trim();
+        var kidsValue = kids.value.trim();
+        var parentsValue = parents.value.trim();
+        var spouseValue = spouse.value.trim();
+        
+        if(empolyeeValue==""){
+            setError(empolyee,"Empolyee Name can't be blank");
+        }else{
+            setSuccess(empolyee);
+        }
+        if(spouseValue==""){
+            setError(spouse,"Empolyee & Spouse can't be blank");
+        }else{
+            setSuccess(spouse);
+        }
+        if(kidsValue == ''){
+            setError(kids, "Empolyee Spouse & kids can't be blank")
+        }else{
+            setSuccess(kids);
+        }
+        if(parentsValue == ''){
+            setError(parents, "Empolyee, Spouse, Kids & Parents/Parents in Laws")
+        }else{
+            setSuccess(parents);
+        }
+    }
+
+    function setError(u, msg){
+    var parentBox =  u.parentElement;
+    parentBox.className="input-field error";
+    var span =  parentBox.querySelector("span");
+    // var fa = parentBox.querySelector(".fa");
+    span.innerText=msg;
+    // fa.className="fa fa-exclamation-circle";
+    }
+
+    function setSuccess(u){
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field success";
+        // var fa = parentBox.querySelector(".fa");
+        // fa.className="fa fa-check-circle";
+    }
+
+    </script>
 
 </body>
 </html>

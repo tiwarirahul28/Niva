@@ -6,8 +6,8 @@
     text-decoration: none;
     transition: 0.5s;
     font-family: 'Poppins';
-    /* overflow-x: hidden; */
     line-height: normal;
+    outline: none;
 }
 
 html {
@@ -192,6 +192,113 @@ html {
 }
 /* end of navbar */
 
+.container,.form-box{
+    display: block;
+    width: 100%;
+}
+
+
+.form-box{
+    margin: 20px auto;
+    background: #fff;
+}
+.form-box .input-field{
+    margin-bottom: 20px;
+    position: relative;
+}
+.form-box .input-field #phone{
+    padding-left: 8%;
+}
+.form-box .input-field .input-number{
+    position: absolute;
+    left: 2%;
+    top: 10px;
+}
+.form-box input, select{
+    display: block;
+    padding: 10px;
+    /* margin-top: 15px; */
+    font-size: 14px;
+    background-color: #F3F3F3;
+    border: none;
+    color: #5C5C5C;
+    outline: none;
+    width: 100%;
+}
+.form-box input[type='text']{
+    padding-right: 25px
+}
+.form-box h2{
+    display: block;
+    text-align: center;
+    font-size: 28px;
+   margin-bottom: 40px;
+}
+.form-box label{
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 5px;
+    display: block;
+
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.input-field img{
+    position: absolute;
+    right: 2%;
+    top: 37%;
+}
+.form-box input[type='submit']{
+    background: #F2984C;
+    cursor: pointer;
+    color: #fff;
+    width: 300px;
+    box-shadow: 0px 3px 21px 5px rgb(243 143 70 / 18%);
+    margin: auto;
+    border-radius: 15px;
+    font-size: 18px;
+    /* padding: 12px 100px; */
+    margin-top: 50px;
+}
+
+.form-box .fa{
+    position: absolute;
+    right: 10px;
+    margin-top: -30px;
+}
+.form-box .input-field.error input{
+    border-color: #f00;
+    border-width: 2px;
+}
+.form-box .input-field.error .fa{
+    color: #f00;
+    margin-right: 20px;
+}
+.form-box .input-field.success input{
+    border-color: #0b0;
+    border-width: 2px;
+}
+.form-box .input-field.success .fa{
+    color: #0b0;
+    margin-right: 20px;
+}
+.input-field span{
+    display: none;
+}
+.input-field.error span{
+    color: #f00;
+    display: block;
+    font-size: 12px;
+}
+
+.input-field.success span{
+    color: #0b0;
+}
 
 
 /* start of hero */
@@ -223,50 +330,16 @@ span{
     width: 100%;
 }
 
-.hero .left .input {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: 10px auto;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.merg{
-    display: flex;
-}
-
-.merg span{
-    margin-left: -35px;
-    font-size: 26px;
-    color: #6F6F6F;
-    top: 200px;
-}
-
-.merg input{
-    width: 100%;
-}
-
-.merg img{
-    margin-left: -30px;
-    margin-top: 14px;
-    font-size: 16px;
-}
-
-.hero .left .input input{
-    padding: 10px;
-    margin-top: 15px;
-    font-size: 14px;
-    background-color: #F3F3F3;
-    border: none;
-}
-
-.btn-link{
+.btn-link {
     text-align: center;
     margin-top: 20px;
-}
-
-.btn-link .btn{
-    padding: 12px 100px;
-    margin-top: 10px;
+    cursor: pointer;
 }
 
 .hero .right{
@@ -436,10 +509,6 @@ section{
 
 .arrow{
     display: flex;
-    height: 50px;
-    margin-top: 220px;
-    margin-left: -495px;
-    margin-right: 347px;
 }
 
 .arrow button{
@@ -449,9 +518,18 @@ section{
     cursor: pointer;
 }
 
-.arrow-rotate{
-    transform: rotate(180deg);
-    margin-top: -12px;
+.arrow button {
+    color: #fff;
+    width: 100px;
+}
+.arrow button svg{
+    width: 100%;
+    fill: #c1c1c1;
+}
+
+.arrow button svg:hover{
+    fill: #F2984C !important;
+    transition: 0.2s;
 }
 
 .right-side{
@@ -591,6 +669,7 @@ section{
 .content-didi{
     display: grid;
     grid-template-columns: 40% 60%;
+    /* height: ; */
 }
 
 .content-didi .content-left{
@@ -644,16 +723,18 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 250px;
+    margin-bottom: 20px;
 }
 
 .content-didi .content-right .didi{
     width: 60%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .content-didi .content-right .didi img{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    max-width: 100%;
     margin-bottom: -6px;
 }
 
@@ -715,6 +796,7 @@ section{
     background: rgba(247, 179, 67, 0.05);
     width: 100%;
     padding: 70px 0;
+    margin-top: -19px;
 }
 
 .hear p{
@@ -733,6 +815,8 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: -60px;
+    margin-top: 60px;
 }
 
 .custom-image .custom-link{
@@ -864,7 +948,7 @@ section{
     margin-top: -28px;
 }
 
-.frequent form input[type="text"]{
+.frequent form input{
     padding: 8px;
     margin-top: 15px;
     font-size: 16px;
@@ -874,7 +958,7 @@ section{
     margin-top: 50px;
 }
 
-input[type="submit"]{
+.frequent form input[type="submit"]{
     width: 120px;
     height: 40px;
     border: none;
@@ -989,7 +1073,7 @@ input[type="submit"]{
 }
 
 @media screen and (max-width: 768px){
-    .frequent form input[type="text"]{
+    .frequent form input{
         padding: 8px;
         margin-top: 15px;
         font-size: 16px;
@@ -999,7 +1083,7 @@ input[type="submit"]{
         margin-top: 50px;
     }
     
-    input[type="submit"]{
+    .frequent form input[type="submit"]{
         width: 80px;
         height: 43px;
         border: none;
@@ -1102,6 +1186,9 @@ input[type="submit"]{
     }
     .about-right{
         margin: 0 auto;
+    }
+    .hear{
+        margin-top: 0;
     }
 }
 

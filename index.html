@@ -9,10 +9,6 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -31,9 +27,9 @@
             <!-- Links -->
             <div class="nav-links">
                 <a href="/index.html" class="nav-link">Home</a>
-                <a href="/pagetwo.html" class="nav-link">About</a>
-                <a href="/pagethree.html" class="nav-link">Feature</a>
-                <a href="/pagefour.html" class="nav-link">FAQs</a>
+                <a href="/" class="nav-link">About</a>
+                <a href="/" class="nav-link">Feature</a>
+                <a href="/" class="nav-link">FAQs</a>
                 <div class="contact-link" id="contact-us">
                     <a href="" class="btn">Contact Us</a>
                 </div>
@@ -48,18 +44,35 @@
             <div class="left">
                 <h1><span>Group Health Insurance </span> <br>Solution for your Organisation</h1>
                 <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
-                <div class="input">
-                    <input type="text" placeholder="Company Name">
-                    <div class="merg">
-                        <input id="cars" type="text" placeholder="Industry Type">
-                        <img src="/images/Polygon 1.svg" alt="">
-                    </div>
-                    <input type="text" placeholder="Number of Live to be Insured (MIN 10)">
-                    <input type="text" placeholder="+91  Phone Number">
-                    
-                    <div class="btn-link">
-                        <a href="" class="btn">Continue</a>
-                    </div>
+                <div class="container">
+                    <form class="form-box">
+                        <div class="input-field">
+                            <input type="text" id="company" placeholder="Company Name" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
+                            <span></span>
+                        </div>
+                        <div class="input-field">
+                            <select name="cars" id="industry">
+                                <option value="">Industry Type</option>
+                                <option value="IT">IT</option>
+                                <option value="Auto Components">Auto Components</option>
+                                <option value="Automobile">Automobile</option>
+                                <option value="Agriculture">Agriculture</option>
+                            </select>
+                            <img src="/images/Polygon 1.svg" alt="dropdown">
+                            <span></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="num" placeholder="Number of Lives to be Insured (Min 10)" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                            <span></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="number" id="phone"  value="+91 ">
+                            <div class="input-number">+91</div>
+                            <span></span>
+                        </div>
+                        <input type="submit" id="submit" value="continue">
+
+                    </form>
                 </div>
             </div>
             <div class="right">
@@ -149,56 +162,60 @@
             <div class="left-side">
                 <h1 class="section-left">Why choose <span>Niva Bupa Health Insruance? </span></h1>
                 <p class="paragraph-center"> Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
-            </div>
-            <div class="arrow">
-                <button class="prev">
-                    <img src="/images/left arrow.svg" alt="">
-                </button>
-                <button class="next arrow-rotate">
-                    <img src="/images/left arrow.svg" alt="">
-                </button>
+                <div class="arrow">
+                    <button class="prev">
+                        <svg class="arrow-icon">
+                            <use xlink:href="/images/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="next">
+                        <svg class="arrow-icon">
+                            <use xlink:href="/images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="right-side">
                 <div class="card-container">
                     <div class="card">
                         <img src="/images/Slider-1.png" alt="image">
                         <div class="content1">
-                            <h1>Heavy Weight</h1>
+                            <h1>Lorem ipsum dolor</h1>
                             <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>                        
                         </div>
                     </div>
                     <div class="card">
                         <img src="/images/Slider-2.png" alt="image">
                         <div class="content1">
-                            <h1>Heavy Weight</h1>
+                            <h1>Lorem ipsum dolor</h1>
                             <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="/images/Slider-3.png" alt="image">
                         <div class="content1">
-                            <h1>Heavy Weight</h1>
+                            <h1>Lorem ipsum dolor</h1>
                             <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>                        
                         </div>
                     </div>
                     <div class="card">
                         <img src="/images/Slider-1.png" alt="image">
                         <div class="content1">
-                            <h1>Heavy Weight</h1>
+                            <h1>Lorem ipsum dolor</h1>
                             <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>                        
                         </div>
                     </div>
                     <div class="card">
                         <img src="/images/Slider-2.png" alt="image">
                         <div class="content1">
-                            <h1>Heavy Weight</h1>
+                            <h1>Lorem ipsum dolor</h1>
                             <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="/images/Slider-3.png" alt="image">
                         <div class="content1">
-                            <h1>Heavy Weight</h1>
+                            <h1>Lorem ipsum dolor</h1>
                             <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>                        
                         </div>
                     </div>
@@ -319,11 +336,11 @@
         <h1 class="section-center">Hear it <span> from our customers </span></h1>
         <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
         <div class="customers">
-            <input class="radio" id="eleven" name="group" type="radio" checked>
-            <input class="radio" id="seven" name="group" type="radio">
-            <input class="radio" id="eight" name="group" type="radio">
-            <input class="radio" id="nine" name="group" type="radio">
-            <input class="radio" id="ten" name="group" type="radio">
+            <input class="radio" id="eleven" name="category" type="radio" checked="checked">
+            <input class="radio" id="seven" name="category" type="radio">
+            <input class="radio" id="eight" name="category" type="radio">
+            <input class="radio" id="nine" name="category" type="radio">
+            <input class="radio" id="ten" name="category" type="radio">
             <div class="custom-image">
                 <div class="custom-link">
                     <label class="person-image" id="eleven-custom" for="eleven">
@@ -367,19 +384,19 @@
                     <p class="paragraph-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam hic, itaque iste commodi adipisci ab temporibus nostrum minima aut expedita quis ducimus, vel odio non? Without CSS, every web page would be drab plain text and images that flowed straight down the page. With CSS, you can add color and background images and change the layout of your page — your web pages can feel like works of art!</p>
                 </div>
                 <div class="ethinos" id="custom-seven">
-                    <div class="panel-heading">Ubaid Shaikh | CFO @ Ethinos Digital</div>
+                    <div class="panel-heading">Anuj Kothari | CTO @ Ethinos Digital</div>
                     <p class="paragraph-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum esse perspiciatis non, distinctio optio ex praesentium? Pariatur est eum autem dolores qui maiores officiis. You will learn many aspects of styling web pages! You’ll be able to set up the correct file structure, edit text and colors, and create attractive layouts. With these skills, you’ll be able to customize the appearance of your web pages to suit your every need!</p>
                 </div>
                 <div class="ethinos" id="custom-eight">
-                    <div class="panel-heading">Ubaid Shaikh | CFO @ Ethinos Digital</div>
+                    <div class="panel-heading">Rajan Tiwari | Project Manager @ Ethinos Digital</div>
                     <p class="paragraph-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum esse perspiciatis non, distinctio optio ex praesentium? Pariatur est eum autem dolores qui maiores officiis. We recommend that you complete Learn HTML before learning CSS.</p>
                 </div>
                 <div class="ethinos" id="custom-nine">
-                    <div class="panel-heading">Ubaid Shaikh | CFO @ Ethinos Digital</div>
+                    <div class="panel-heading">Rahul Tiwari | Software Developer @ Ethinos Digital</div>
                     <p class="paragraph-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum esse perspiciatis non, distinctio optio ex praesentium? Pariatur est eum autem dolores qui maiores officiis. We recommend that you complete Learn HTML before learning CSS.</p>
                 </div>
-                <div class="ethinos" id="custome-ten">
-                    <div class="panel-heading">Ubaid Shaikh | CFO @ Ethinos Digital</div>
+                <div class="ethinos" id="custom-ten">
+                    <div class="panel-heading">Anusha | CFO @ Ethinos Digital</div>
                     <p class="paragraph-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum esse perspiciatis non, distinctio optio ex praesentium? Pariatur est eum autem dolores qui maiores officiis. You will learn many aspects of styling web pages! You’ll be able to set up the correct file structure, edit text and colors, and create attractive layouts. With these skills, you’ll be able to customize the appearance of your web pages to suit your every need!</p>
                 </div>
             </div>
@@ -393,12 +410,12 @@
         <h1 class="section-center">Frequently Asked Questions<span> (FAQs) </span></h1>
         <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
         <form>
-            <input type="text" placeholder="Phone Number">
+            <input type="number" placeholder="Phone Number">
             <input type="submit" name="" value="Send OTP">
         </form>
     </div>
     <div class="warpper">
-        <input class="radio" id="one" name="group" type="radio" checked>
+        <input class="radio" id="one" name="group" type="radio" checked="checked">
         <input class="radio" id="two" name="group" type="radio">
         <input class="radio" id="three" name="group" type="radio">
         <input class="radio" id="four" name="group" type="radio">
@@ -599,6 +616,94 @@
             //e.preventDefault(); 
             $('.card-container').slick('slickNext');
         } );  
+
+        $(document).ready(function(){
+            $('#submit').click(function(){
+                var company = $('#company').val();
+
+                if (company == ''){
+                    $('show_error').html('Please the enter the company name');
+                    $('show_error').css('color', 'red');
+                    return false;
+                }
+            });
+        });
+
+        document.getElementById("submit").addEventListener("click",function(event){
+            event.preventDefault();
+            checkData();
+        });
+
+    var company = document.getElementById("company");
+    var num = document.getElementById("num");
+    var industry = document.getElementById("industry");
+    var phone = document.getElementById("phone");
+
+    function checkData(){
+        var companyValue = company.value.trim();
+        var numValue = num.value.trim();
+        var industryValue = industry.value.trim();
+        var phoneValue = phone.value.trim();
+        
+        var companyBool = false;
+        var numBool = false;
+        var industryBool = false;
+        var phoneBool = false;
+         
+        if(companyValue==""){
+            setError(company,"Company Name can't be blank");
+        }else{
+            setSuccess(company);
+            companyBool = true;
+        }
+
+        if(industryValue == ''){
+            setError(industry, " Industry Type can't be blank")
+        }else{
+            setSuccess(industry);
+            industryBool = true;
+        }
+
+        if(numValue == ''){
+            setError(num, " Number can't be blank")
+        }else{
+            setSuccess(num);
+            numBool = true;
+        }
+
+        if(phoneValue == ''){
+            setError(phone, " Phone can't be blank")
+        }else{
+            setSuccess(phone);
+            phoneBool = true;
+        }
+
+        if(phoneBool && numBool && industryBool && companyBool){
+            window.location.href = '/pagetwo.html';
+        }
+
+        // if(pass1Value==""){
+        //     setError(pass1,"Policy date can't be blank");
+        // }else{
+        //     setSuccess(pass1);
+        // }
+    }
+
+    function setError(u, msg){
+    var parentBox =  u.parentElement;
+    parentBox.className="input-field error";
+    var span =  parentBox.querySelector("span");
+    // var fa = parentBox.querySelector(".fa");
+    span.innerText=msg;
+    // fa.className="fa fa-exclamation-circle";
+    }
+
+    function setSuccess(u){
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field success";
+        // var fa = parentBox.querySelector(".fa");
+        // fa.className="fa fa-check-circle";
+    }
     </script>
 </body>
 </html>

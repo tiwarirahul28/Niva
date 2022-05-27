@@ -33,7 +33,7 @@
             font-size: 16px;
         }
 
-        .hero .left .input-1 input{
+        .hero .left form .input-1 input, select{
             padding: 10px;
             /* width: 125px; */
             font-size: 14px;
@@ -41,7 +41,7 @@
             border: none;
             margin: 8px 0;
         }
-        .hero .left .input-1 i{
+        .hero .left form .input-1 i{
             font-size: 18px;
             color: #00AEEF;
             margin: 18px 10px;
@@ -72,6 +72,40 @@
             color: #00AEEF;
             font-size: 18px;
         }
+        .input-1 .fa{
+            position: absolute;
+            right: 10px;
+            margin-top: -30px;
+        }
+        .input-1 .merg-1.error input{
+            border-color: #f00;
+            border-width: 2px;
+        }
+        .input-1 .merg-1.error .fa{
+            color: #f00;
+            margin-right: 20px;
+        }
+        .input-1 .merg-1.success input{
+            border-color: #0b0;
+            border-width: 2px;
+        }
+        .input-1 .merg-1.success .fa{
+            color: #0b0;
+            margin-right: 20px;
+        }
+        .merg-1 span{
+            display: none;
+        }
+        .merg-1.error span{
+            color: #f00;
+            display: block;
+            font-size: 12px;
+        }
+
+        .merg-1.success span{
+            color: #0b0;
+        }
+
         @media screen and (max-width:1200px){
             .hero .left .input-1 {
                 display: grid;
@@ -88,8 +122,10 @@
             .merg-1{
                 width: 100%;
             }
-            .hero .left .input-1 input{
+            .hero .left .input-1 input, select{
                 width: 88%;
+                outline: none;
+                border: none;
             }
             .btn-link{
                 margin-top: 10px;
@@ -113,9 +149,9 @@
             <!-- Links -->
             <div class="nav-links">
                 <a href="/index.html" class="nav-link">Home</a>
-                <a href="/pagetwo.html" class="nav-link">About</a>
-                <a href="/pagethree.html" class="nav-link">Feature</a>
-                <a href="/pagefour.html" class="nav-link">FAQs</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Feature</a>
+                <a href="#" class="nav-link">FAQs</a>
                 <div class="contact-link" id="contact-us">
                     <a href="" class="btn">Contact Us</a>
                 </div>
@@ -134,37 +170,72 @@
                     <h1>Employee</h1>
                     <a href="">+ Add Employee</a>
                 </div>
-                <div class="input-1">
-                    <div class="merg-1">
-                        <input id="cars" type="text" placeholder="Age Group">
-                        <img src="/images/Polygon 1.svg" alt="">
-                    </div>
-                    <div class="merg-1">
-                        <input id="cars" type="text" placeholder="Sum Insured">
-                        <img src="/images/Polygon 1.svg" alt="">
-                    </div>
-                    <div class="merg-1">
-                        <input id="cars" type="text" placeholder="No. of Members">
-                    </div>
-                    <div class="merg-1">
-                        <input id="cars" type="text" placeholder="Age Group">
-                        <img src="/images/Polygon 1.svg" alt="">
-                    </div>
-                    <div class="merg-1">
-                        <input id="cars" type="text" placeholder="Sum Insured">
-                        <img src="/images/Polygon 1.svg" alt="">
-                    </div>
-                    <div class="merg-1">
-                        <input type="text" placeholder="No. of Members">
-                        <i class="fas fa-solid fa-trash"></i>
+                <form action="/index.html">
+                    <div class="input-1">
+                        <div class="merg-1">
+                            <select name="industry" id="industry" >
+                                <option value="">Industry Type</option>
+                                <option value="IT">IT</option>
+                                <option value="Auto Components">Auto Components</option>
+                                <option value="Automobile">Automobile</option>
+                                <option value="Agriculture">Agriculture</option>
+                            </select>
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
                         </div>
+                        <div class="merg-1">
+                            <select name="industry" id="industryone" >
+                                <option value="">Industry Type</option>
+                                <option value="IT">IT</option>
+                                <option value="Auto Components">Auto Components</option>
+                                <option value="Automobile">Automobile</option>
+                                <option value="Agriculture">Agriculture</option>
+                            </select>
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="merg-1">
+                            <input id="members" type="text" placeholder="No. of Members" >
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="merg-1">
+                            <select name="industry" id="industrytwo" >
+                                <option value="">Industry Type</option>
+                                <option value="IT">IT</option>
+                                <option value="Auto Components">Auto Components</option>
+                                <option value="Automobile">Automobile</option>
+                                <option value="Agriculture">Agriculture</option>
+                            </select>
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="merg-1">
+                            <select name="industry" id="industrythree" >
+                                <option value="">Industry Type</option>
+                                <option value="IT">IT</option>
+                                <option value="Auto Components">Auto Components</option>
+                                <option value="Automobile">Automobile</option>
+                                <option value="Agriculture">Agriculture</option>
+                            </select>
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <div class="merg-1">
+                            <input type="text" id="membersone" placeholder="No. of Members" >
+                            <i class="fas fa-solid fa-trash"></i>
+                            <i class="fa " aria-hidden="true"></i>
+                            <span></span>
+                        </div> 
                     </div>
-                    <div class="btn-link">
-                        <a href="" class="btn">Continue</a>
+                    <div class="btn-link ">
+                        <input type="submit" id="submit" value="continue" style="border-radius: 10px;padding: 14px 100px;background: #F2984C;color: #fff;font-size: 16px;cursor: pointer; border: none;">
                     </div>
                     <div class="previous">
-                        <a href=""> < Back to Previous</a>
-                    </div>
+                        <a href="/pagethree.html"> < Back to Previous</a>
+                    </div>  
+                </form>
+
                 </div>
                 <div class="right">
                     <img src="/images/hero section img - Copy.png" alt="">
@@ -180,6 +251,76 @@
         </a>
     </div>
     <script src="/Js//App.js"></script>
+    <script>
+        document.getElementById("submit").addEventListener("click",function(event){
+            event.preventDefault();
+            checkData();
+        });
+
+    var industry = document.getElementById("industry");
+    var industryone = document.getElementById("industryone");
+    var members = document.getElementById("members");
+    var industrytwo = document.getElementById("industrytwo");
+    var industrythree = document.getElementById("industrythree");
+    var membersone = document.getElementById("membersone");
+
+    function checkData(){
+        var industryValue = industry.value.trim();
+        var industryoneValue = industryone.value.trim();
+        var membersValue = members.value.trim();
+        var industrytwoValue = industrytwo.value.trim();
+        var industrythreeValue = industrythree.value.trim();
+        var membersoneValue = membersone.value.trim();
+        
+        if(industryValue==""){
+            setError(industry,"Industry Type can't be blank");
+        }else{
+            setSuccess(industry);
+        }
+        if(industrytwoValue==""){
+            setError(industrytwo,"Industry Type can't be blank");
+        }else{
+            setSuccess(industrytwo);
+        }
+        if(industryoneValue == ''){
+            setError(industryone, "Industry Type can't be blank")
+        }else{
+            setSuccess(industryone);
+        }
+        if(membersValue == ''){
+            setError(members, "No. of Members can't be blank")
+        }else{
+            setSuccess(members);
+        }
+        if(industrythreeValue==""){
+            setError(industrythree,"Industry Type can't be blank");
+        }else{
+            setSuccess(industrythree);
+        }
+        if(membersoneValue == ''){
+            setError(membersone, "No. of Members can't be blank")
+        }else{
+            setSuccess(membersone);
+        }
+    }
+
+    function setError(u, msg){
+    var parentBox =  u.parentElement;
+    parentBox.className="input-field error";
+    var span =  parentBox.querySelector("span");
+    // var fa = parentBox.querySelector(".fa");
+    span.innerText=msg;
+    // fa.className="fa fa-exclamation-circle";
+    }
+
+    function setSuccess(u){
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field success";
+        // var fa = parentBox.querySelector(".fa");
+        // fa.className="fa fa-check-circle";
+    }
+
+    </script>
 
 </body>
 </html>
