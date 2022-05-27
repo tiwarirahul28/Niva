@@ -410,6 +410,9 @@ input::-webkit-inner-spin-button {
     .hero .left h1{
         padding-top: 0;
     }
+    .form-box .input-field #phone {
+        padding-left: 8%;
+    }
 }
 /* end of hero */
 
