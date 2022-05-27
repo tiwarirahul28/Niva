@@ -539,10 +539,6 @@ section{
     /* fill: #c1c1c1; */
 }
 
-/* .arrow button svg:hover{
-    fill: #F2984C !important;
-    transition: 0.1s;
-} */
 
 .arrow button svg path{
     stroke: #c1c1c1;
