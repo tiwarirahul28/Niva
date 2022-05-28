@@ -89,10 +89,10 @@
                             <span></span>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="pass1" placeholder="Policy Start Date">
+                            <input type="date" id="pass1" placeholder="Policy Start Date">
                             <span></span>
                         </div>
-                        <input type="submit" id="submit" value="Submit">
+                        <input type="submit" id="submit" value="continue">
                         <div class="previous">
                             <a href="/index.html"> < Back to Previous</a>
                         </div>
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="right">
-                <img src="/images/hero section img - Copy.png" alt="">
+                <img src="/images/Mask groupbanner.svg" alt="">
             </div>
         </div>
     </div>
@@ -118,79 +118,75 @@
             checkData();
         });
 
-    var company = document.getElementById("company");
-    var num = document.getElementById("num");
-    var industry = document.getElementById("industry");
-    var policy = document.getElementById("policy");
-    var pass1 = document.getElementById("pass1");
+        var company = document.getElementById("company");
+        var num = document.getElementById("num");
+        var industry = document.getElementById("industry");
+        var policy = document.getElementById("policy");
+        var pass1 = document.getElementById("pass1");
 
-    function checkData(){
-        var companyValue = company.value.trim();
-        var numValue = num.value.trim();
-        var industryValue = industry.value.trim();
-        var policyValue = policy.value.trim();
-        var pass1Value = pass1.value.trim();
-        
-        var companyBool = false;
-        var numBool = false;
-        var industryBool = false;
-        var phoneBool = false;
-        var pass1Bool = false;
+        function checkData(){
+            var companyValue = company.value.trim();
+            var numValue = num.value.trim();
+            var industryValue = industry.value.trim();
+            var policyValue = policy.value.trim();
+            var pass1Value = pass1.value.trim();
+            
+            var companyBool = false;
+            var numBool = false;
+            var industryBool = false;
+            var phoneBool = false;
+            var pass1Bool = false;
 
-        if(companyValue==""){
-            setError(company,"Company Name can't be blank");
-        }else{
-            setSuccess(company);
-            companyBool = true;
+            if(companyValue==""){
+                setError(company,"Company Name can't be blank");
+            }else{
+                setSuccess(company);
+                companyBool = true;
+            }
+
+            if(industryValue == ''){
+                setError(industry, " Industry Type can't be blank")
+            }else{
+                setSuccess(industry);
+                industryBool = true;
+            }
+
+            if(numValue == ''){
+                setError(num, " Number can't be blank")
+            }else{
+                setSuccess(num);
+                numBool = true;
+            }
+
+            if(policyValue == ''){
+                setError(policy, " policy Type can't be blank")
+            }else{
+                setSuccess(policy);
+                phoneBool = true;
+            }
+
+            if(pass1Value==""){
+                setError(pass1,"Policy date can't be blank");
+            }else{
+                setSuccess(pass1);
+                pass1Bool = true;
+            }
+            if(phoneBool && numBool && industryBool && companyBool && pass1Bool){
+                window.location = '/pagethree.html';
+            }
         }
 
-        if(industryValue == ''){
-            setError(industry, " Industry Type can't be blank")
-        }else{
-            setSuccess(industry);
-            industryBool = true;
+        function setError(u, msg){
+            var parentBox =  u.parentElement;
+            parentBox.className="input-field error";
+            var span =  parentBox.querySelector("span");
+            span.innerText=msg;
         }
 
-        if(numValue == ''){
-            setError(num, " Number can't be blank")
-        }else{
-            setSuccess(num);
-            numBool = true;
+        function setSuccess(u){
+            var parentBox =  u.parentElement;
+            parentBox.className="input-field success";
         }
-
-        if(policyValue == ''){
-            setError(policy, " policy Type can't be blank")
-        }else{
-            setSuccess(policy);
-            phoneBool = true;
-        }
-
-        if(pass1Value==""){
-            setError(pass1,"Policy date can't be blank");
-        }else{
-            setSuccess(pass1);
-            pass1Bool = true;
-        }
-        if(phoneBool && numBool && industryBool && companyBool && pass1Bool){
-            window.location = '/pagethree.html';
-        }
-    }
-
-    function setError(u, msg){
-    var parentBox =  u.parentElement;
-    parentBox.className="input-field error";
-    var span =  parentBox.querySelector("span");
-    // var fa = parentBox.querySelector(".fa");
-    span.innerText=msg;
-    // fa.className="fa fa-exclamation-circle";
-    }
-
-    function setSuccess(u){
-        var parentBox =  u.parentElement;
-        parentBox.className="input-field success";
-        // var fa = parentBox.querySelector(".fa");
-        // fa.className="fa fa-check-circle";
-    }
 
     </script>
 

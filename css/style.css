@@ -221,7 +221,6 @@ html {
 .form-box input, select{
     display: block;
     padding: 10px;
-    /* margin-top: 15px; */
     font-size: 14px;
     background-color: #F3F3F3;
     border: none;
@@ -257,6 +256,7 @@ select {
     right: 2%;
     top: 37%;
 }
+
 .form-box input[type='submit']{
     background: #F2984C;
     cursor: pointer;
@@ -266,7 +266,6 @@ select {
     margin: auto;
     border-radius: 15px;
     font-size: 18px;
-    /* padding: 12px 100px; */
     margin-top: 50px;
 }
 
@@ -283,14 +282,11 @@ select {
     color: #f00;
     margin-right: 20px;
 }
-.form-box .input-field.success input{
+/* .form-box .input-field.success input{
     border-color: #0b0;
     border-width: 2px;
-}
-.form-box .input-field.success .fa{
-    color: #0b0;
-    margin-right: 20px;
-}
+} */
+
 .input-field span{
     display: none;
 }
@@ -298,10 +294,6 @@ select {
     color: #f00;
     display: block;
     font-size: 12px;
-}
-
-.input-field.success span{
-    color: #0b0;
 }
 
 @media screen and (max-width: 1200px){
