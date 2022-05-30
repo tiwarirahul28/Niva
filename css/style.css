@@ -8,6 +8,7 @@
     font-family: 'Poppins';
     line-height: normal;
     outline: none;
+    /* position: absolute; */
 }
 
 html {
@@ -282,10 +283,6 @@ select {
     color: #f00;
     margin-right: 20px;
 }
-/* .form-box .input-field.success input{
-    border-color: #0b0;
-    border-width: 2px;
-} */
 
 .input-field span{
     display: none;
@@ -336,6 +333,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 
 .btn-link {
     text-align: center;
