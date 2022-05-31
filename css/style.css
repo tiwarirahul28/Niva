@@ -677,7 +677,7 @@ section{
 
 
 /* Start of Benefits of joing Niva Bupa Health Insurance */
-.content-didi{
+/* .content-didi{
     display: grid;
     grid-template-columns: 40% 60%;
 }
@@ -790,7 +790,7 @@ section{
     .didi{
         width:100%;
     }
-}
+} */
 /* end of Benefits of joing Niva Bupa Health Insurance */
 
 
@@ -1011,6 +1011,7 @@ section{
 .panels{
     width: 80%;
     margin: 0 auto; 
+    margin-bottom: 50px;
 }
 
 .panel{
@@ -1101,8 +1102,9 @@ section{
 /* end of FAQs */
 
 
+
 /* Start of About */
-.about{
+/* .about{
     width: 100%;
     display: flex;
     padding: 70px 0;
@@ -1217,7 +1219,7 @@ section{
     .right-box{
         margin-top: 50px;
     }
-}
+} */
 /* end of About */
 
 
