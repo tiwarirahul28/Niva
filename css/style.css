@@ -208,7 +208,7 @@ html {
     position: relative;
 }
 .form-box .input-field #phone{
-    padding-left: 8%;
+    padding-left: 7%;
     font-size: 14px;
     color: #252B42;
 }
@@ -295,7 +295,7 @@ select {
 
 @media screen and (max-width: 1200px){
     .form-box .input-field #phone {
-        padding-left: 5%;
+        padding-left: 9%;
     }
 }
 
@@ -399,9 +399,6 @@ input::-webkit-inner-spin-button {
     }
     .hero .left h1{
         padding-top: 0;
-    }
-    .form-box .input-field #phone {
-        padding-left: 8%;
     }
 }
 /* end of hero */
@@ -830,8 +827,6 @@ section{
     cursor: pointer;
     padding:10px 20px;
     display:inline-block;
-    /* width: 180px;
-    height: 160px; */
     margin-right: 20px;
     border-radius:3px 3px 0px 0px;
     margin-bottom: 50px;
@@ -928,6 +923,7 @@ section{
 #ten:checked ~ .custom-image #ten-custom *{
     filter: grayscale(0);
     opacity: 1;
+    box-shadow: 20px 15px 30px 0px rgb(165, 164, 164)
 }
 @media screen and (max-width: 1200px){
     .custom-image{
