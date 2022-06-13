@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PageThree</title>
+    
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -17,12 +18,32 @@
             margin-top: 20px;
             font-weight: 900;
         }
-        .merg input{
-            background-color: #F7B343;
+        .box{
+            margin: 20px 0;
+            width: 100%;
         }
-        .merg input::placeholder {
+
+        .box label{
+            cursor: pointer;
+            width: 100%;
+        }
+    
+        input[type='radio']{
+            display: none;
+        }
+        input[type='radio'] + label{
+            background-color: #F3F3F3;
+            padding: 10px;
+            font-size: 14px; 
+            width: 100%;
+            color: #6F6F6F;  
+            display: block;         
+        }
+        input[type='radio']:checked + label{
+            background-color: #F2984C;
             color: #fff;
-        } 
+        }
+
         .previous{
             text-align: center;
             margin-top: 30px;
@@ -75,34 +96,30 @@
                 <p class="paragraph-center">Reach out to us today for comprehensive, and customised health insurance plan for your workforce.</p>
                 <div class="container">
                     <h2>Who all to be covered in Policy?</h2>
-                    <form class="form-box">
-                        <div class="input-field">
-                            <input type="text" id="empolyee" placeholder="Empolyee Name" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
-                            <i class="fa " aria-hidden="true"></i>
-                            <span></span>
+                    <!-- <div class="main"> -->
+                        <div class="box">
+                            <input id="empolyee" name="category" type="radio" checked>
+                            <label for="empolyee"> Employee Only </label>
                         </div>
-                        <div class="input-field merg">
-                            <input type="text" id="spouse" placeholder="Empolyee & Spouse" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
-                            <i class="fa " aria-hidden="true"></i>
-                            <span></span>
+                        <div class="box">
+                            <input id="spouse" name="category" type="radio">
+                            <label for="spouse"> Employee & Spouse </label>
                         </div>
-                        <div class="input-field">
-                            <input type="text" id="kids" placeholder="Empolyee, Spouse & Kids" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
-                            <i class="fa " aria-hidden="true"></i>
-                            <span></span>
+                        <div class="box">
+                            <input id="kids" name="category" type="radio">
+                            <label for="kids"> Employee, Spouse & Kids </label>
                         </div>
-                        <div class="input-field">
-                            <input type="text" id="parents" placeholder="Empolyee, Spouse, Kids & Parents/Parents in Laws" oninput="this.value = this.value.replace(/[^a-z .]/g, '').replace(/(\..*)\./g, '$1');">
-                            <i class="fa " aria-hidden="true"></i>
-                            <span></span>
-                        </div>                        
+                        <div class="box">
+                            <input id="parents" name="category" type="radio">
+                            <label for="parents"> Employee, Spouse, Kids & Parents/Parents in Laws </label>
+                        </div>
                         <div class="btn-link ">
                             <input type="submit" id="submit" value="continue" style="border-radius: 10px;padding: 14px 100px;background: #F2984C;color: #fff;font-size: 16px;cursor: pointer; border: none;">
                         </div>
                         <div class="previous">
                             <a href="/pagetwo.html"> < Back to Previous</a>
-                        </div>  
-                    </form>
+                        </div> 
+                    <!-- </div> -->
                 </div>
             </div>
             <div class="right">
@@ -118,74 +135,7 @@
         </a>
     </div>
     <!-- End of Hero -->
-    <script src="/Js//App.js"></script>
-    <script>
-        function formsubmit(){
-            console.log('FormData')
-        }
-        document.getElementById("submit").addEventListener("click",function(event){
-            event.preventDefault();
-            checkData();
-        });
-
-    var empolyee = document.getElementById("empolyee");
-    var kids = document.getElementById("kids");
-    var parents = document.getElementById("parents");
-    var spouse = document.getElementById("spouse");
-
-    function checkData(){
-        var empolyeeValue = empolyee.value.trim();
-        var kidsValue = kids.value.trim();
-        var parentsValue = parents.value.trim();
-        var spouseValue = spouse.value.trim();
-        
-        var employeeBool = false;
-        var kidsBool = false;
-        var parentsBool = false;
-        var spouseBool = false;
-
-        if(empolyeeValue==""){
-            setError(empolyee,"Empolyee Name can't be blank");
-        }else{
-            setSuccess(empolyee);
-            employeeBool = true;
-        }
-        if(spouseValue==""){
-            setError(spouse,"Empolyee & Spouse can't be blank");
-        }else{
-            setSuccess(spouse);
-            spouseBool = true;
-        }
-        if(kidsValue == ''){
-            setError(kids, "Empolyee Spouse & kids can't be blank")
-        }else{
-            setSuccess(kids);
-            kidsBool = true;
-        }
-        if(parentsValue == ''){
-            setError(parents, "Empolyee, Spouse, Kids & Parents/Parents in Laws")
-        }else{
-            setSuccess(parents);
-            parentsBool = true;
-        }
-        if(employeeBool && kidsBool && parentsBool && spouseBool){
-            window.location = '/pagefour.html'
-        }
-    }
-
-    function setError(u, msg){
-        var parentBox =  u.parentElement;
-        parentBox.className="input-field error";
-        var span =  parentBox.querySelector("span");
-        span.innerText=msg;
-    }
-
-    function setSuccess(u){
-        var parentBox =  u.parentElement;
-        parentBox.className="input-field success";
-    }
-
-    </script>
+    <script src="Js/App.js"></script>
 
 </body>
 </html>
