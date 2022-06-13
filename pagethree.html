@@ -136,6 +136,73 @@
     </div>
     <!-- End of Hero -->
     <script src="Js/App.js"></script>
+    <script>
+        function formsubmit(){
+            console.log('FormData')
+        }
+        document.getElementById("submit").addEventListener("click",function(event){
+            event.preventDefault();
+            checkData();
+        });
+
+    var empolyee = document.getElementById("empolyee");
+    var kids = document.getElementById("kids");
+    var parents = document.getElementById("parents");
+    var spouse = document.getElementById("spouse");
+
+    function checkData(){
+        var empolyeeValue = empolyee.value.trim();
+        var kidsValue = kids.value.trim();
+        var parentsValue = parents.value.trim();
+        var spouseValue = spouse.value.trim();
+        
+        var employeeBool = false;
+        var kidsBool = false;
+        var parentsBool = false;
+        var spouseBool = false;
+
+        if(empolyeeValue==""){
+            setError(empolyee,"Empolyee Name can't be blank");
+        }else{
+            setSuccess(empolyee);
+            employeeBool = true;
+        }
+        if(spouseValue==""){
+            setError(spouse,"Empolyee & Spouse can't be blank");
+        }else{
+            setSuccess(spouse);
+            spouseBool = true;
+        }
+        if(kidsValue == ''){
+            setError(kids, "Empolyee Spouse & kids can't be blank")
+        }else{
+            setSuccess(kids);
+            kidsBool = true;
+        }
+        if(parentsValue == ''){
+            setError(parents, "Empolyee, Spouse, Kids & Parents/Parents in Laws")
+        }else{
+            setSuccess(parents);
+            parentsBool = true;
+        }
+        if(employeeBool || kidsBool || parentsBool || spouseBool){
+            window.location = '/pagefour.html'
+        }
+    }
+
+    function setError(u, msg){
+        var parentBox =  u.parentElement;
+        parentBox.className="box error";
+        var span =  parentBox.querySelector("span");
+        span.innerText=msg;
+    }
+
+    function setSuccess(u){
+        var parentBox =  u.parentElement;
+        parentBox.className="box success";
+    }
+
+    </script>
 
 </body>
 </html>
