@@ -225,86 +225,75 @@
     </div>
     <script src="/Js//App.js"></script>
     <script>
-        document.getElementById("submit").addEventListener("click",function(event){
-            event.preventDefault();
-            checkData();
-        });
-
-    var industry = document.getElementById("industry");
-    var industryone = document.getElementById("industryone");
-    var members = document.getElementById("members");
-    var industrytwo = document.getElementById("industrytwo");
-    var industrythree = document.getElementById("industrythree");
-    var membersone = document.getElementById("membersone");
-
-    function checkData(){
-        var industryValue = industry.value.trim();
-        var industryoneValue = industryone.value.trim();
-        var membersValue = members.value.trim();
-        var industrytwoValue = industrytwo.value.trim();
-        var industrythreeValue = industrythree.value.trim();
-        var membersoneValue = membersone.value.trim();
-        
-        if(industryValue==""){
-            setError(industry,"Industry Type can't be blank");
-        }else{
-            setSuccess(industry);
-        }
-        if(industrytwoValue==""){
-            setError(industrytwo,"Industry Type can't be blank");
-        }else{
-            setSuccess(industrytwo);
-        }
-        if(industryoneValue == ''){
-            setError(industryone, "Industry Type can't be blank")
-        }else{
-            setSuccess(industryone);
-        }
-        if(membersValue == ''){
-            setError(members, "No. of Members can't be blank")
-        }else{
-            setSuccess(members);
-        }
-        if(industrythreeValue==""){
-            setError(industrythree,"Industry Type can't be blank");
-        }else{
-            setSuccess(industrythree);
-        }
-        if(membersoneValue == ''){
-            setError(membersone, "No. of Members can't be blank")
-        }else{
-            setSuccess(membersone);
-        }
-    }
-
-    function setError(u, msg){
-    var parentBox =  u.parentElement;
-    parentBox.className="input-field error";
-    var span =  parentBox.querySelector("span");
-    // var fa = parentBox.querySelector(".fa");
-    span.innerText=msg;
-    // fa.className="fa fa-exclamation-circle";
-    }
-
-    function setSuccess(u){
-        var parentBox =  u.parentElement;
-        parentBox.className="input-field success";
-        // var fa = parentBox.querySelector(".fa");
-        // fa.className="fa fa-check-circle";
-    }
-
     $(document).ready(function(){
         var i = 1;
         $('#add').click(function(){
             //alert('ok');
             i++;
-            $('#dynamicadd').append('<div class="merg-1 row'+i+'"><select name="industry" id="industrytwo" ><option value="">Industry Type</option><option value="IT">IT</option><option value="Auto Components">Auto Components</option><option value="Automobile">Automobile</option><option value="Agriculture">Agriculture</option></select><img src="/images/Polygon 1.svg" alt="dropdown"><span></span></div><div class="merg-1 row'+i+'"><select name="industry" id="industrythree" ><option value="">Industry Type</option><option value="IT">IT</option><option value="Auto Components">Auto Components</option><option value="Automobile">Automobile</option><option value="Agriculture">Agriculture</option></select><img src="/images/Polygon 1.svg" alt="dropdown"><span></span></div><div class="merg-1 row'+i+'"><input type="text" id="membersone" placeholder="No. of Members"><a href="#" id="'+i+'" class="remove_row" ><i class="fas fa-solid fa-trash"></i></a><span></span></div>'); 
+            $('#dynamicadd').append('<div class="merg-1 row'+i+'"><select name="industry" id="industry" ><option value="">Industry Type</option><option value="IT">IT</option><option value="Auto Components">Auto Components</option><option value="Automobile">Automobile</option><option value="Agriculture">Agriculture</option></select><img src="/images/Polygon 1.svg" alt="dropdown"><span></span></div><div class="merg-1 row'+i+'"><select name="industry" id="industryone" ><option value="">Industry Type</option><option value="IT">IT</option><option value="Auto Components">Auto Components</option><option value="Automobile">Automobile</option><option value="Agriculture">Agriculture</option></select><img src="/images/Polygon 1.svg" alt="dropdown"><span></span></div><div class="merg-1 row'+i+'"><input type="text" id="members" placeholder="No. of Members"><a href="#" id="'+i+'" class="remove_row" ><i class="fas fa-solid fa-trash"></i></a><span></span></div>'); 
         });
             $(document).on('click','.remove_row',function(){
             var row_id = $(this).attr("id");
             $('.row'+row_id+'').remove();
         });
     });
+
+    document.getElementById("submit").addEventListener("click",function(event){
+        event.preventDefault();
+        checkData();
+    });
+
+    var industry = document.getElementById("industry");
+    var industryone = document.getElementById("industryone");
+    var members = document.getElementById("members");
+    
+
+    function checkData(){
+        var industryValue = industry.value.trim();
+        var industryoneValue = industryone.value.trim();
+        var membersValue = members.value.trim();
+
+        var industryBool = false;
+        var industryoneBool = false;
+        var membersBool = false;
+        // var spouseBool = false;
+        
+        if(industryValue==""){
+            setError(industry,"Industry Type can't be blank");
+        }else{
+            setSuccess(industry);
+            industryBool = true;
+        }
+        if(industryoneValue == ''){
+            setError(industryone, "Industry Type can't be blank")
+        }else{
+            setSuccess(industryone);
+            industryoneBool = true;
+        }
+        if(membersValue == ''){
+            setError(members, "No. of Members can't be blank")
+        }else{
+            setSuccess(members);
+            membersBool = true;
+        }
+        if(industryBool || industryoneBool || membersBool){
+            window.location = '/pagefive.html'
+        }
+    }
+
+    function setError(u, msg){
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field error";
+        var span =  parentBox.querySelector("span");
+        span.innerText=msg;
+    }
+
+    function setSuccess(u){
+        var parentBox =  u.parentElement;
+        parentBox.className="input-field success";
+    }
+
+    
 
     </script>
 
