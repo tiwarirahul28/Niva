@@ -1329,12 +1329,15 @@ section{
     font-weight: 600;
 }
 .custom-boxr{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 20px;
+    /* display: flex;
+    flex-wrap: wrap; */
     padding-left: 50px;
 }
 .custom-boxr .plan-box{
-    width: 300px;
+    /* width: 300px; */
     margin: 26px 30px;
 }
 .plan-box h1{
@@ -1434,6 +1437,10 @@ section{
     }
     .features-container{
         padding: 10px;
+    }
+    .custom-boxr{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width:720px){
